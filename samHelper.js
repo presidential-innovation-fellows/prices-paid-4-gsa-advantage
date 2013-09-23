@@ -1,6 +1,8 @@
 // This is the primary JavaScript 'glue' code that ties the app-agnostic
 // usdsJsHelper library to the SAM application
 //
+// This file lives at: https://github.com/GSA-OCSIT/sam-helper
+//
 // It requires usdsJsHelper.js be loaded before execution
 
 $(document).ready(function() {

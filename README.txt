@@ -1,4 +1,5 @@
 Developer's README file for the SAM Helper Chrome Extension
+This file lives at: https://github.com/GSA-OCSIT/sam-helper
 
 This directory contains three groups of files.
 

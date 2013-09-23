@@ -2,7 +2,7 @@
 // It provides a mechanism for adding user-assistance to 'frozen'
 // or legacy web applications
 //
-// Source code lives on github at ?
+// This file lives at: https://github.com/GSA-OCSIT/sam-helper
 
 var $;
 

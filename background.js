@@ -1,5 +1,6 @@
 // This JavaScript file is invoked from background.html
 // For details of its behavior, refer to the documentation for Chrome extensions
+// This file lives at: https://github.com/GSA-OCSIT/sam-helper
 
 // Handle a command from a user page
 // request object properties:

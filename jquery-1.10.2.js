@@ -3,6 +3,8 @@
  * Local copy of jQuery to eliminate any cross-domain security issues
  * It may be appropriate to upgrade this file periodically
  *
+ * This file lives at: https://github.com/GSA-OCSIT/sam-helper
+ *
  * jQuery JavaScript Library v1.10.2
  * http://jquery.com/
  *
