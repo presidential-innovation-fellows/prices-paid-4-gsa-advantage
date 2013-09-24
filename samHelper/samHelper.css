@@ -1,0 +1,101 @@
+/*  This file contains styles applied to the SAM Helper content */
+/*  This file lives at: https://github.com/GSA-OCSIT/sam-helper */
+
+.busa {
+  position:fixed;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  max-height: 10em;
+  min-height: 1em;
+  z-index: 10000;
+  line-height: 125%;
+  font-size: 125%;
+}
+
+.busa a:link {
+  color: lightblue;
+}
+
+.busa a:visited {
+  color: lightpink;
+}
+
+.busa a:active {
+  color: red;
+}
+.busa a:hover {
+  color: lavender;
+}
+
+div#busa-main {
+  text-align: left;
+  height: 10em;
+  z-index: 10000;
+  top: 1em;
+  left: 0px;
+  background-color: 0xcccccc;
+}
+
+#busa-xtoggle {
+  min-height: 2em;
+  z-index: 10000;
+}
+
+div#busa-toggle {
+  width: 100px;
+  z-index: 10000;
+}
+
+#busa-toggle div {
+  padding: 1em;
+}
+
+.busa-guide-text {
+  padding: 1em;
+  float: left;
+  font-size: 1.4em;
+  line-height: 1.5em;
+  width: 67%;
+}
+
+div.busa div.overview {
+  float: left;
+  line-height:1.3;
+  font-size: 1.2em;
+  text-align: left;
+  width: 40%;
+  padding: 1em;
+  padding-left: 5em;
+  margin-bottom: 1em;
+}
+
+div.busa div.help_info {
+  float: right;
+  line-height:1.3;
+  font-size: 1.2em;
+  text-align: left;
+  width: 25%;
+  padding: 1em;
+}
+
+body div.quick_hint#display-hover-text {
+    position: absolute;
+    background-color: red;
+    margin: 5px;
+    padding-right: 20 px;
+    color: white;
+    line-height:1.3;
+    font-size: 1.0em;
+    z-index: 20000;
+    visibility: visible;
+}
+div.progress#progress {
+    clear:both;
+    font-size: 150%;
+    background-color: gray;
+    color: black;
+    border: 2px solid black;
+    margin: 3px;
+    padding: 2px;
+    width: 250px;
+}
