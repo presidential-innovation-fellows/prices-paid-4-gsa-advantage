@@ -1,0 +1,7 @@
+README file for GSAAdvantage Helper 0.1.0
+This file lives at:
+
+About GSAAdvantage Helper:
+GSAAdvantage Helper adds user assistance within the workflow of the existing GSAAdvantage service.
+The assistance includes field-level information and validation, and page-level help as well.  It is based on the USDS Helper, a tool for creating "add-on" usability for an existing
+form intensive web application.  The "add-on" model allows for the 
