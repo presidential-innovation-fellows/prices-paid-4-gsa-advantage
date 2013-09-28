@@ -2,14 +2,16 @@
   "name" : "Help me with GSA Advantage",
   "version" : "0.1.0",
   "description" : "get me some data from Prices Paid",
-  "background" : { "page": "background.html" },
+  "background" : { "page": "gsaAdvHelperBg.html" },
+  "icons" : {
+    "48": "icon48.png"          
+    },
   "permissions" : [ "tabs", "https://www.gsaadvantage.gov/*" ],
   "page_action": {
     "default_icon": {                  
-    "19": "icon19.png",          
-    "38": "icon38.png",
-    "48": "icon48.png"          
-    },
+        "19": "icon19.png",          
+        "38": "icon38.png"
+        },
     "default_title": "get data from prices paid",
     "default_popup": "popup.html"
     },
@@ -17,13 +19,14 @@
 	   {
 	   "matches": ["https://www.gsaadvantage.gov/*"],
 	   "css": ["gsaAdvHelper.css"],
-	   "js": [ "jquery-1.10.2.js", "usdsJsHelper.js", "gsaAdvHelper.js"]
+	   "js": [ "jquery-1.10.2.js", "gsaAdvHelper.js"]
 	   }
   ],
   "minimum_chrome_version" : "6.0.0.0",
   "manifest_version": 2,
   "web_accessible_resources": [
       "gsaAdvHelper.html",
-      "gsaAdvHelper.json"
+      "gsaAdvHelper.json",
+      "images/*"
   ]
 }

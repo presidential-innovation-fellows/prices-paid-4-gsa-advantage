@@ -1,6 +1,74 @@
-/*  This file contains styles applied to the SAM Helper content */
-/*  This file lives at: https://github.com/GSA-OCSIT/sam-helper */
+/*  This file contains styles applied to the Helper content */
+/*  This file lives at: */
 
+body.popup {
+    min-width: 400px;
+    min-height: 400px;
+    font-size: 1.5em;
+    background-color: #eeeeee;
+    color: #0000b0;
+}
+
+body.popup div.popup {
+    font-size 2.0em;
+    background-color: #eeeeee;
+    color: #0000b0;
+}
+
+body.popup div.popup h2.popup {
+    font-size 2.0em;
+}
+
+div#container div#main table tbody tr td div#pp-insertion {
+font-size: 1.2em;
+border: 1px solid gray;
+margin-bottom: 2px;
+background-image: url(https://www.gsaadvantage.gov/images/adv13/images/gui/bgs/grad_fill_05.jpg);
+}
+
+div#container div#main table tbody tr td div#pp-insertion h2{
+font-size: 20pt;
+color: #cd2712;
+}
+
+div#container div#main table tbody tr td div#pp-insertion {
+font-size: 14pt;
+}
+
+.search-result {
+min-height: 100px;
+font-size: 12pt;
+}
+
+.pp-separator {
+min-height: 20px;
+font-size: 12pt;
+background-color: #cccccc;
+}
+
+table.pp-search-result {
+min-height: 100px;
+font-size: 12pt;
+padding: 5px;
+}
+
+table.pp-search-result tr td img {
+padding-left: 20px;
+padding-right: 20px;
+margin-left: 20px;
+margin-right: 20px;
+}
+
+table.pp-search-result tr td p {
+padding-left: 20px;
+padding-right: 20px;
+margin-left: 20px;
+margin-right: 20px;
+}
+
+#pp-recommendation {
+    background-color: #aaffaa;
+}
 .busa {
   position:fixed;
   width: 100%;
@@ -33,7 +101,7 @@ div#busa-main {
   z-index: 10000;
   top: 1em;
   left: 0px;
-  background-color: 0xcccccc;
+  background-color: #cccccc;
 }
 
 #busa-xtoggle {
