@@ -15,7 +15,7 @@ $(document).ready(function() {
         busa_toggle_div:
         $('<div class="busa"><p><a href="#" id="busa-toggle">Minimize the SAM Helper</a></p></div>'),
         quickHintDiv:
-            $('<div class="quick_hint" id="display-hover-text"></div>'),
+            $('<div class="quick_hint"</div>'),
         progressDiv: $('<div class="progress" id="progress"></div>')
     };
     insertionPoints.busa_main_div.insertBefore(insertionPoints.samInsertionPoint);

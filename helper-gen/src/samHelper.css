@@ -78,7 +78,7 @@ div.busa div.help_info {
   padding: 1em;
 }
 
-body div.quick_hint {
+body div.quick_hint#display-hover-text {
     position: absolute;
     background-color: red;
     margin: 5px;

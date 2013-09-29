@@ -30,29 +30,23 @@ UsdsJsHelper.prototype.loadFieldHandlers = function(pageId, siteData) {
                 currentField = ev.data.field;
                 switch(ev.type) {
                     case 'mouseenter':  // display a quick hint
-                    if (currentField.quickHintMode !== "disable") {
-                        if (currentField.quickHintMode === "direct") {
-                            if (currentField.required === "true") {
-                                hintText =  "<br>" + currentField.quickHint + "<br>(required)";
-                            } else {
-                                hintText = "<br>" + currentField.quickHint + "<br>(optional)";
-                            }
-                        } else if (currentField.quickHintMode === "html") {
-                            hintText = 'There will be html';
-                        }
-                        pos = $(this).position();
-                        hoverHtmlDiv = $('<div class="quick_hint" id="' + currentField.token + '-hint">'
-                            + hintText + '</div>');
-                        RIGHT_SHIFT_AMOUNT = 400;
-                        hoverHtmlDiv.css({
-                            "left": (pos.left + RIGHT_SHIFT_AMOUNT),
-                            "font-size": "150%"});
-                        hoverHtmlDiv.insertAfter(this);
+                    pos = $(this).position();
+                    if (currentField.required === "true") {
+                        hintText =  "<br>" + currentField.quickHint + "<br>(required)";
+                    } else {
+                        hintText = "<br>" + currentField.quickHint + "<br>(optional)";
                     }
+                    hoverHtmlDiv = $('<div class="quick_hint" id="display-hover-text">'
+                        + hintText + '</div>');
+                    RIGHT_SHIFT_AMOUNT = 400;
+                    hoverHtmlDiv.css({
+                        "left": (pos.left + RIGHT_SHIFT_AMOUNT),
+                        "font-size": "150%"});
+                    hoverHtmlDiv.insertAfter(this);
                     break;
 
-                    case 'mouseleave':  // stop displaying quick hint
-                    $('div.quick_hint').remove();
+                    case 'mouseleave':  // stop displaying hover
+                    $('div.quick_hint#display-hover-text').remove();
                     break;
 
                     case 'focus':   // display info in helper

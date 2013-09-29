@@ -1,0 +1,7 @@
+README file for SAM Helper 0.5.0
+This file lives at: https://github.com/GSA-OCSIT/sam-helper
+
+About SAM Helper:
+SAM Helper is intended to be the first application of a USDS Helper.  It adds user assistance within the workflow of the existing SAM web registration service.
+The assistance includes field-level information and validation, and page-level help as well.  The USDS Helper is a tool for creating "add-on" usability for an existing
+form intensive web application.  The "add-on" model allows for the 

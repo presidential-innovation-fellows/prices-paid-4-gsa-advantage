@@ -17,8 +17,7 @@
                 {
                     "token": "Title",
                     "required": "false",
-                    "valid": "Any pull-down value",
-                    "quickHint": "Your address title",
+                    "quickHintMode": "disable",
                     "focus": "Choose a value",
                     "unfocused": "Oops, your title is invalid",
                     "validator": {
@@ -29,8 +28,8 @@
                 {
                     "token": "First Name",
                     "required": "true",
+                    "quickHintMode": "direct",
                     "quickHint": "Your legal first or given name",
-                    "valid": "alphabetic characters only\n14 character maximum",
                     "focus": "Enter your name",
                     "unfocused": "don't you know your own name?",
                     "validator": {
@@ -44,7 +43,7 @@
                 {
                     "token": "Middle Initial",
                     "required": "false",
-                    "valid": "one letter only, no punctuation",
+                    "quickHintMode": "direct",
                     "quickHint": "Your middle initial",
                     "focus": "enter your initial",
                     "unfocused": "one letter only please",
@@ -56,8 +55,8 @@
                 {
                     "token": "Last Name",
                     "required": "true",
+                    "quickHintMode": "direct",
                     "quickHint": "Your legal last or family name",
-                    "valid": "alphabetic characters only\n14 character maximum",
                     "focus": "please enter your family name",
                     "unfocused": "Oops, your name is invalid",
                     "validator": {
@@ -71,8 +70,7 @@
                 {
                     "token": "Suffix",
                     "required": "false",
-                    "valid": "any characters",
-                    "quickHint": "Suffix",
+                    "quickHintMode": "disable",
                     "focus": "Enter a suffix if desired",
                     "unfocused": "",
                     "validator": {
@@ -83,8 +81,7 @@
                 {
                     "token": "Email Address",
                     "required": "true",
-                    "valid": "must be a legal email address",
-                    "quickHint": "Primary contact email address",
+                    "quickHintMode": "html",
                     "focus": "please enter your email address",
                     "unfocused": "this is not a valid email",
                     "validator": {
@@ -94,7 +91,7 @@
                 {
                     "token": "Confirm Email Address",
                     "required": "true",
-                    "valid": "must match email address",
+                    "quickHintMode": "direct",
                     "quickHint": "Confirm your contact email address",
                     "focus": "Please confirm your email address",
                     "unfocused": "this is not a match",
@@ -109,8 +106,8 @@
                 {
                     "token": "Phone",
                     "required": "true",
+                    "quickHintMode": "direct",
                     "quickHint": "Your primary phone number",
-                    "valid": "10 digit us phone number",
                     "focus": "Enter your phone number",
                     "unfocused": "Oops, your name is invalid",
                     "validator": {
@@ -123,8 +120,8 @@
                 {
                     "token": "Phone Extension",
                     "required": "false",
+                    "quickHintMode": "direct",
                     "quickHint": "extension",
-                    "valid": "anything",
                     "focus": "Enter any necessary extension",
                     "unfocused": "",
                     "validator": {
@@ -135,8 +132,8 @@
                 {
                     "token": "Fax",
                     "required": "false",
+                    "quickHintMode": "direct",
                     "quickHint": "Fax number",
-                    "valid": "10 digit us phone number",
                     "focus": "Enter your fax number",
                     "unfocused": "",
                     "validator": {
