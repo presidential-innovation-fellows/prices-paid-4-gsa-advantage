@@ -1,0 +1,32 @@
+{
+  "name" : "SAM Helper",
+  "version" : "0.6.0",
+  "description" : "Walk me through the business registration process at SAM.gov (System for Acquisition Management)",
+  "background" : { "page": "html/background.html" },
+  "permissions" : [ "tabs", "https://www.sam.gov/*", "http://mo.tynsax.com/api/*" ],
+  "page_action": {
+    "default_icon": {                  
+    "19": "images/icon19.png",          
+    "38": "images/icon38.png"
+    },
+    "default_title": "Help with SAM registration",
+    "default_popup": "html/popup.html"
+    },
+  "content_scripts": [
+	   {
+	   "matches": ["https://www.sam.gov/*"],
+	   "css": ["css/samHelper.css"],
+	   "js": [
+           "js/lib/jquery-1.10.2.js",
+           "js/lib/usdsJsHelper.js",
+           "js/samHelper.js"
+        ]
+	   }
+  ],
+  "minimum_chrome_version" : "6.0.0.0",
+  "manifest_version": 2,
+  "web_accessible_resources": [
+      "html/samHelper.html",
+      "samHelper.json"
+  ]
+}
