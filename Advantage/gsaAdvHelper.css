@@ -40,6 +40,10 @@ min-height: 100px;
 font-size: 12pt;
 }
 
+tr.item-match-row {
+background-color: #aaaaff;
+}
+
 .pp-separator {
 min-height: 20px;
 font-size: 12pt;
