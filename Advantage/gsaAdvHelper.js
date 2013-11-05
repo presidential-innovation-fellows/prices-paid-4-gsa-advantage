@@ -3,38 +3,6 @@
 //
 
 var advantage = {
-    tags: {
-        itemSrchResContainer:
-            '<div class="adv-helper" id="item-results-container">',
-        itemSrchResCollapsed:
-            '<div class="adv-helper" id="item-results-collapsed">',
-        itemSrchResExpanded:
-            '<div class="adv-helper" id="item-results-expanded">',
-        itemSrchResTopContent:
-            '<div class="adv-helper" id="item-results-top-content">',
-        itemSrchResBottomContent:
-            '<div class="adv-helper" id="item-results-bottom-content">',
-        itemSrchResTable:
-            '<div class="adv-helper" id="item-results-table">',
-        itemSrchResTblHdrLine:
-              '<theader class="item-match-row search-result-row">' +
-              '<td class="item-match-data search-result-data" colspan=0>',
-
-        itemSrchResTblHdrRow:
-              '<theader class="item-match-row search-result-row">',
-        itemSrchResTblHdrData:
-	          '<td class="item-match-data search-result-data" colspan=0>',
-
-        itemSrchResTblRow:
-	          '<tr class="item-match-row search-result-row">',
-
-        itemSrchResTblVerRule:
-	          '<td valign="middle" bgcolor="#AAAAFF"' +
-	          'class="greyVertRuleCenter">&nbsp;</td>',
-
-        nothing: 'so I dont mess up commas'
-    },
-
     content: {
         addMeToSvcsMenu:
         'See Prices Paid',
@@ -171,6 +139,7 @@ $(document).ready(function() {
 
 
     // This is an insertion in the search results
+    /*
     var searchStr = $(advantage.queries.searchCriteria).text();
     console.log('search for: ' + searchStr);
     searchMe(searchStr,3, function (data) {
@@ -215,67 +184,76 @@ $(document).ready(function() {
 	insertAfter( advantage.queries.searchresult);
       });
 
-    var tags = advantage.tags;
-    var listingHeader =
-	$(advantage.queries.itemMatch).has('tr td input[checked="checked"]').
-            children('tbody').children('tr:first-child');
-	// $(advantage.queries.itemMatch).parent().parent().parent().children('tr:first-child');
-    var itemTitle = $(advantage.queries.itemSearch);
-    var itemQueryStr = itemTitle.text();
-    var itemDetails = itemTitle.parent().parent().parent().next().css('background-color', '#FFBBBB');
-    console.log('search for: ' + itemQueryStr);
-    searchMe(itemQueryStr,3, function (data) {
-      var resultsToDisplay =
-          '<tr><td colspan=0>' +
-            tags.itemSrchResContainer +
-                tags.itemSrchResCollapsed +
-                  'Click Here to See Data from Prices Paid Portal' +
+*/
+    if (document.title === "Product Detail") {
+        var listingHeader =
+        $(advantage.queries.itemMatch).has('tr td input[checked="checked"]').
+                children('tbody').children('tr:first-child');
+        var itemTitle = $(advantage.queries.itemSearch);
+        var itemQueryStr = itemTitle.text();
+        var itemDetails = itemTitle.parent().parent().parent().next().css('background-color', '#FFBBBB');
+        console.log('search for: ' + itemQueryStr);
+        searchMe(itemQueryStr,3, function (data) {
+          var resultsToDisplay =
+            '<div class="adv-helper" id="item-results-container">' +
+                '<div class="adv-helper" id="item-results-toggler">' +
+                      '<p>Data from Prices Paid Portal.</p>' +
+                      '<p id="toggler">Click here to hide.</p>' +
                 '</div>' +
-                tags.itemSrchResExpanded +
-                  tags.itemSrchResTblHdrRow +
-                  tags.itemSrchResTblHdrData +
-                      'Results from searching Prices Paid Portal for '  +
-                          itemQueryStr +
-                  '</td></th>' +
-                  tags.itemSrchResTblHdrRow +
-                      'Results from searching Prices Paid Portal for '  +
-                          itemQueryStr +
-                  '</td></th>' +
-                  tags.itemSrchResTblHdrRow +
-                      // tags.itemSrchResTblVerRule +
-                      // tags.itemSrchResTblData +
-
-                      '<td class="search-result-class">Unit Price</td>' +
-                      '<td valign="middle" bgcolor="#AAAAFF"' +
-                          'class="greyVertRuleCenter">&nbsp;</td>' +
-                      '<td align="right" valign="middle" nowrap="nowrap" bgcolor="#AAAAFF">' +
-                      '<td class="search-result-class">Contractor</td>' +
-                      '<td valign="middle" bgcolor="#AAAAFF"' +
-                          'class="greyVertRuleCenter">&nbsp;</td>' +
-                      '<td align="right" valign="middle" nowrap="nowrap" bgcolor="#AAAAFF">' +
-                  'Description</td>' +
-                  '</th>';
-      $.each(data, function(index, value) {
-	resultsToDisplay += '<tr class="item-match-row search-result-row">' +
-	  '<td class="item-match-data search-result-data" bgcolor="#AAAAFF"></td>' +
-	  '<td valign="middle" bgcolor="#AAAAFF"' +
-	  'class="greyVertRuleCenter">&nbsp;</td>' +
-	  '<td align="right" valign="middle" nowrap="nowrap" bgcolor="#AAAAFF">' +
-	  '<td class="search-result-class">' + value.unitPrice + '</td>' +
-	  '<td valign="middle" bgcolor="#AAAAFF"' +
-	  'class="greyVertRuleCenter">&nbsp;</td>' +
-	  '<td align="right" valign="middle" nowrap="nowrap" bgcolor="#AAAAFF">' +
-	  '<td class="search-result-class">' + value.vendor + '</td>' +
-	  '<td valign="middle" bgcolor="#AAAAFF"' +
-	  'class="greyVertRuleCenter">&nbsp;</td>' +
-	  '<td align="right" valign="middle" nowrap="nowrap" bgcolor="#AAAAFF">' +
-	  value.productDescription + '</td>' +
-	  'class="greyVertRuleCenter">&nbsp;</td>' +
-	  '<td align="right" valign="middle" nowrap="nowrap" bgcolor="#AAAAFF">' +
-	  '<a href="http://pricespaid.acquisition.gov">More Info</a></td>' +
-	  '</tr>';
+                '<div class="adv-helper" id="item-results-expanded">' +
+                    '<p class="item-match-header search-results-data">' +
+                    'Searched '  + itemQueryStr + '</p>' +
+                    '<table class="item-match-table search-results-table"' +
+                          'id="item-match-table">' +
+                      '<thead class="item-match-header search-results-header">' +
+                          '<td class="search-result-class">Unit Price</td>' +
+                          '<td class="search-result-class">Units Ordered</td>' +
+                          '<td class="search-result-class">Ordered By</td>' +
+                          '<td class="search-result-class">Contractor</td>' +
+                          '<td class="search-result-class">Manufacturer</td>' +
+                          '<td class="search-result-class">Full Description</td>' +
+                      '</thead>';
+          $.each(data, function(index, value) {
+        resultsToDisplay += '<tr class="item-match-row search-result-row">' +
+          '<td class="search-result-class">' + value.unitPrice + '</td>' +
+          '<td class="search-result-class">' + value.unitsOrdered + '</td>' +
+          '<td class="search-result-class">' + value.contractingAgency + '</td>' +
+          '<td class="search-result-class">' + value.vendor + '</td>' +
+          '<td class="search-result-class">' + value['Manufacturer Name'] + '</td>' +
+          '<td class="search-result-class popup-info" id="' + index + '">' +
+                  'More&hellip;' + '</td>' +
+          '</tr>';
+         });
+         resultsToDisplay += '</table></div></div>';
+         $(resultsToDisplay).insertBefore('div#sectionheader');
+         $('td.popup-info').on('click', function () {
+            var item = $(this).attr('id');
+            var popupContent =
+                '<div class="advantage-popup"><p>' +
+                    data[item].longDescription +
+                    '</p><p id="click-to-dismiss">' +
+                    '&lsaquo;Click to dismiss&rsaquo;</p>' +
+                    '</div>';
+                $(popupContent).insertBefore('td.popup-info#' +
+                    item);
+            $('div.advantage-popup').on('click', function () {
+                $(this).remove();
+            });
+         });
+         // Handle user actions: open/close portal view, ...
+          var expandedResults =
+              $('div.adv-helper#item-results-expanded');
+          $('div#item-results-toggler p#toggler').on('click', function() {
+            if ($(expandedResults).css('visibility') === 'visible') {
+                expandedResults.css({"visibility": "hidden",
+                                "position": "absolute"});
+                $(this).text('Click to show.');
+            } else {
+                expandedResults.css({"visibility": "visible",
+                                "position": "static"});
+                $(this).text('Click to hide.');
+            }
       });
-    resultsToDisplay += '</div></div></td></tr>'
-    $(resultsToDisplay).insertBefore(listingHeader);
-  });
+      });
+    }
 });

@@ -40,8 +40,52 @@ min-height: 100px;
 font-size: 12pt;
 }
 
+<table class="item-match-header search-results-header"' +
+                      'id="item-match-table">'
+
+table.item-match-table#item-match-table {
+    border: solid gray 3px;
+    background-color: #fafafa;
+    font: 16px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
+}
+
+thead.item-match-header {
+    border: solid gray 1px;
+    background-color: #fafafa;
+    font: 17px bold "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
+}
+
 tr.item-match-row {
-background-color: #aaaaff;
+    font: 15px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
+    border: solid gray 1px;
+}
+
+div.advantage-popup {
+    position: absolute;
+    padding: 10px;
+    line-height: 120%;
+    width: 400px;
+    text-align: left;
+    height: auto;
+    background-color: #eeeeee;
+    font: 16px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
+    border: solid gray 3px;
+}
+
+p#click-to-dismiss {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    font: 14px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
+}
+
+p.item-match-header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: #fafafa;
+    font: 16px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
+    border: solid gray 1px;
 }
 
 .pp-separator {
@@ -78,7 +122,7 @@ color: #ffffff;
 }
 
 h2.modal-dialog#get-user-creds-hdr {
-font: lighter 16px/15px Arial,sans-serif;
+font: lighter 16px/15px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
 }
 
 div.modal-dialog-body {
@@ -90,7 +134,7 @@ color: #000000;
 }
 
 p.modal-dialog#get-user-creds-hdr {
-font: lighter 14px Arial,sans-serif;
+font: lighter 14px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
 }
 
 div.adv-helper {
@@ -100,13 +144,22 @@ div.adv-helper#item-results-container {
 height:auto;
 }
 
-div.adv-helper#item-results-collapsed {
+div.adv-helper#item-results-toggler {
 background-color: #ff0000;
-height: 2em;
+height: auto;
+}
+
+div.adv-helper#item-results-toggler p {
+vertical-align: middle;
+font: 16px "Lucida Sans Unicode","Lucida Grande",sans-serif;
 text-align: center;
 }
 
+div.adv-helper#item-results-toggler p#toggler {
+text-decoration: underline;
 div.adv-helper#item-results-expanded {
+border: solid gray 2px;
+background-color: #fafafa;
 }
 
 div.adv-helper#item-results-top-content {
