@@ -108,24 +108,7 @@ function searchMe(query, numResults, resultHandler) {
   $.getJSON( ppSecrets.ppUrl, jsonReqData, handleSearchResult);
 }
 
-$(document).ready(function() {
-
-
-    // This is a left menu replacement
-    $(advantage.queries.svcsMenu)
-        .parent().clone().children('a')
-        .attr("href", "http://www.google.com")
-        .text(advantage.content.addMeToSvcsMenu).parent()
-        .insertAfter($(advantage.queries.svcsMenu).parent());
-    
-    // Handle authentication for the PP portal
-    // $(advantage.content.userPppCredsGrabber).insertAfter($('div#wrapper'));
-
-    // This is an insertion below the sort bar
-
-    /*
-     * For now don't do this
-
+function addContentBelowSortBar() {
     advantage.insertions.sortbar = $(advantage.queries.sortbar);
     advantage.insertions.sortbar.next().clone()
         .attr("id", "pp-insertion")
@@ -134,12 +117,17 @@ $(document).ready(function() {
             + advantage.insertions.sortbar.text()
             + advantage.content.addMeToSortbar2)
         .insertAfter(advantage.insertions.sortbar);
+}
 
-     */
-
-
-    // This is an insertion in the search results
-    /*
+function addLeftNavItem() {
+    $(advantage.queries.svcsMenu)
+        .parent().clone().children('a')
+        .attr("href", "http://www.google.com")
+        .text(advantage.content.addMeToSvcsMenu).parent()
+        .insertAfter($(advantage.queries.svcsMenu).parent());
+}
+    
+function addToSearchResults() {
     var searchStr = $(advantage.queries.searchCriteria).text();
     console.log('search for: ' + searchStr);
     searchMe(searchStr,3, function (data) {
@@ -183,49 +171,40 @@ $(document).ready(function() {
 	html(advantage.content.searchResultHeader + resultsToDisplay).
 	insertAfter( advantage.queries.searchresult);
       });
+}
 
-*/
-    if (document.title === "Product Detail") {
-        var listingHeader =
-        $(advantage.queries.itemMatch).has('tr td input[checked="checked"]').
-                children('tbody').children('tr:first-child');
-        var itemTitle = $(advantage.queries.itemSearch);
-        var itemQueryStr = itemTitle.text();
-        var itemDetails = itemTitle.parent().parent().parent().next().css('background-color', '#FFBBBB');
-        console.log('search for: ' + itemQueryStr);
-        searchMe(itemQueryStr,3, function (data) {
-          var resultsToDisplay =
-            '<div class="adv-helper" id="item-results-container">' +
-                '<div class="adv-helper" id="item-results-toggler">' +
-                      '<p>Data from Prices Paid Portal.</p>' +
-                      '<p id="toggler">Click here to hide.</p>' +
-                '</div>' +
-                '<div class="adv-helper" id="item-results-expanded">' +
-                    '<p class="item-match-header search-results-data">' +
-                    'Searched '  + itemQueryStr + '</p>' +
-                    '<table class="item-match-table search-results-table"' +
-                          'id="item-match-table">' +
-                      '<thead class="item-match-header search-results-header">' +
-                          '<td class="search-result-class">Unit Price</td>' +
-                          '<td class="search-result-class">Units Ordered</td>' +
-                          '<td class="search-result-class">Ordered By</td>' +
-                          '<td class="search-result-class">Contractor</td>' +
-                          '<td class="search-result-class">Manufacturer</td>' +
-                          '<td class="search-result-class">Full Description</td>' +
-                      '</thead>';
-          $.each(data, function(index, value) {
-        resultsToDisplay += '<tr class="item-match-row search-result-row">' +
-          '<td class="search-result-class">' + value.unitPrice + '</td>' +
-          '<td class="search-result-class">' + value.unitsOrdered + '</td>' +
-          '<td class="search-result-class">' + value.contractingAgency + '</td>' +
-          '<td class="search-result-class">' + value.vendor + '</td>' +
-          '<td class="search-result-class">' + value['Manufacturer Name'] + '</td>' +
-          '<td class="search-result-class popup-info" id="' + index + '">' +
-                  'More&hellip;' + '</td>' +
-          '</tr>';
+var templateMap = [
+                {
+                    name: "item",
+                    filename: "gsaAdvItemTemplate.html",
+                    successHandler: onItemTemplateLoaded,
+                    errorHandler: onItemTemplateLoaded
+                }
+            ];
+
+function onItemTemplateLoaded(data) {
+    var resultsToDisplay;
+     $(data).insertBefore('div#sectionheader');
+     var itemTitle = $(advantage.queries.itemSearch);
+     var itemQueryStr = itemTitle.text();
+     $('div.adv-helper#item-results-expanded p').text('Searched for "' +
+                itemQueryStr + '"');
+     searchMe(buildQueryString(itemQueryStr,
+                retrieveSearchParams()),3, function (data) {
+         $.each(data, function(index, value) {
+              var itemTd = '<td class="search-result-class">';
+                  resultsToDisplay +=
+                  '<tr class="item-match-row search-result-row">' +
+                  itemTd + value.unitPrice + '</td>' +
+                  itemTd + value.unitsOrdered + '</td>' +
+                  itemTd + value.contractingAgency + '</td>' +
+                  itemTd + value.vendor + '</td>' +
+                  itemTd + value['Manufacturer Name'] + '</td>' +
+                  '<td class="search-result-class popup-info" id="' +
+                          index + '">' + 'More&hellip;' + '</td>' + '</tr>';
          });
-         resultsToDisplay += '</table></div></div>';
-         $(resultsToDisplay).insertBefore('div#sectionheader');
+         $('table.item-match-table#item-match-table tbody').
+                    html(resultsToDisplay);
          $('td.popup-info').on('click', function () {
             var item = $(this).attr('id');
             var popupContent =
@@ -240,7 +219,6 @@ $(document).ready(function() {
                 $(this).remove();
             });
          });
-         // Handle user actions: open/close portal view, ...
           var expandedResults =
               $('div.adv-helper#item-results-expanded');
           $('div#item-results-toggler p#toggler').on('click', function() {
@@ -254,6 +232,56 @@ $(document).ready(function() {
                 $(this).text('Click to hide.');
             }
       });
-      });
+    });
+}
+
+function onItemTemplateError( jqXHR, textStatus, errorThrown ) {
+    console.log('ajax failed with error: ' + textStatus);
+}
+
+function executeTemplate(templates, templateName) {
+    $.each(templates, function(index, value) {
+        if (value.name === templateName) {
+            $.ajax({
+                type: "GET",
+                url: chrome.extension.getURL(value.filename),
+                dataType: "html"
+                }).done(value.successHandler).
+                    fail(value.errorHandler);
+            return false;
+        }
+    });
+}
+
+function buildQueryString(userEntry, extraParams) {
+    var queryString = userEntry;
+
+    if (extraParams) {
+        $.each(extraParams, function(index, value) {
+            queryString += '&' + index + '=' + value;
+        });
+    }
+    return queryString;
+}
+
+function retrieveSearchParams() {
+    var params = null;
+    if (localStorage && localStorage.searchParams) {
+        params = JSON.parse(localStorage.searchParams);
+    }
+    return params;
+}
+/*
+
+         // Handle user actions: open/close portal view, ...
+         */
+
+$(document).ready(function() {
+    
+    // Handle authentication for the PP portal
+    // $(advantage.content.userPppCredsGrabber).insertAfter($('div#wrapper'));
+
+    if (document.title === "Product Detail") {
+        executeTemplate(templateMap, 'item');
     }
 });

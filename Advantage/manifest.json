@@ -29,6 +29,7 @@
   "manifest_version": 2,
   "web_accessible_resources": [
       "gsaAdvHelper.html",
+      "gsaAdvItemTemplate.html",
       "gsaAdvHelper.json",
       "images/*"
   ]
