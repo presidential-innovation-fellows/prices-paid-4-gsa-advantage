@@ -30,6 +30,7 @@
   "web_accessible_resources": [
       "gsaAdvHelper.html",
       "gsaAdvItemTemplate.html",
+      "gsaAdvCredsTemplate.html",
       "gsaAdvHelper.json",
       "images/*"
   ]
