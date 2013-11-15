@@ -5,10 +5,8 @@
 //
 // It requires usdsJsHelper.js be loaded before execution
 
-chrome.storage.local.get( 'helperMode', function ( items ) {
-if (true) {
-// if (items.helperMode && items.helperMode === 'help') {
 $(document).ready(function() {
+
     // define the insertion points
     var usdsJsHelper = new UsdsJsHelper();
     var insertionPoints = {
@@ -154,6 +152,4 @@ $(document).ready(function() {
     } else {
         $('div#busa-main').slideUp();
     }
-});
-}
 });

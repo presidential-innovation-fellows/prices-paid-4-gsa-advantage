@@ -1,0 +1,31 @@
+{
+    "title": "Sam Helper Configuration",
+    "comment": "",
+    "pages": [
+        {
+            "page_name": "SAM_gov",
+            "progress": "3"
+        },
+        {
+            "page_name": "Create_an_AccountChoose_Account_Type_",
+            "progress": "6"
+        },
+        {"page_name":"Personal_Information______","form_fields":[{"token":"Username","required":"false","validator":{"type":"none"},"quickHint":""},{"token":"Password","required":"false","validator":{"type":"none"},"quickHint":""},{"token":"Login","required":"false","validator":{"type":"none"},"quickHint":""},{"token":"First_Name","required":"true","validator":{"type":"alpha-string"},"quickHint":"Enter your own first name"},{"token":"Middle_Initial","required":"false","validator":{"type":"none"},"quickHint":""},{"token":"Last_Name","required":"true","validator":{"type":"alpha-string"},"quickHint":"This is your last name"},{"token":"Suffix","validator":{"type":"none"},"quickHint":""},{"token":"Email_Address","required":"true","validator":{"type":"email"},"quickHint":""},{"token":"Confirm_Email_Address","required":"true","validator":{"type":"confirm"},"quickHint":""},{"token":"Phone","required":"true","validator":{"type":"us-phone"},"quickHint":""},{"token":"Phone_Extension","validator":{"type":"none"},"quickHint":""},{"token":"Fax","validator":{"type":"none"},"quickHint":""},{"token":"Address_Line_1","validator":{"type":"none"},"quickHint":""},{"token":"Address_Line_2","validator":{"type":"none"},"quickHint":""},{"token":"City","validator":{"type":"none"},"quickHint":""},{"token":"State_Province","validator":{"type":"none"},"quickHint":""},{"token":"ZIP___Postal_Code","validator":{"type":"none"},"quickHint":""},{"token":"ZIP_Code_Plus4","validator":{"type":"none"},"quickHint":""},{"token":"Cancel","validator":{"type":"none"},"quickHint":""},{"token":"Back","validator":{"type":"none"},"quickHint":""},{"token":"Submit","validator":{"type":"none"},"quickHint":""},{"token":"Start_Registration","validator":{"type":"none"},"quickHint":""},{"token":"Back","validator":{"type":"none"},"quickHint":""},{"token":"Next","validator":{"type":"none"},"quickHint":""},{"token":"Next","validator":{"type":"none"},"quickHint":""}]},
+        {
+            "page_name": "Personal_Information__Duplicate_Email_Address_",
+            "progress": "16"
+        },
+        {
+            "page_name": "Account_Information",
+            "progress": "20"
+        },
+        {
+            "page_name": "Summary",
+            "progress": "22"
+        },
+        {
+            "page_name": "Create_Account__Personal_Account_Created_Confirmation",
+            "progress": "24"
+        }
+    ]
+}

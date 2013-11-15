@@ -1,33 +1,6 @@
 /*  This file contains styles applied to the SAM Helper content */
 /*  This file lives at: https://github.com/GSA-OCSIT/sam-helper */
 
-h2.table-title {
-    padding: 7px;
-    font-family: "Lucinda Grande",Arial,sans-serif;
-    font-size: 13px;
-    font-weight: 80%;
-}
-
-body div.shadow-editor#shadow-frame {
-    height: 230px;
-}
-
-body div.editor#editor-frame {
-    position:fixed;
-    top: 0px;
-    z-index: 1000;
-    width: 100%;
-    height: 230px;
-}
-
-body div.editor#editor-frame div.editor#field-table {
-    height: 150px;
-    background-color: #eeeeee;
-    color: black;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
 .busa {
   position:fixed;
   width: 100%;
