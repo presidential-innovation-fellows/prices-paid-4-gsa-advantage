@@ -56,39 +56,45 @@ $(document).ready(function() {
         tbody += '<tr class="field-record" id="'
             + elTitle + '" token ="' + token + '">'
             + '<td>' + elTitle + '</td>'
-            + '<td id="' + token + '-required">';
+            + '<td id="' + elTitle + '-required">';
 
-            /* TODO: for this to work, must grab actual text, not title
-            if (elTitle.indexOf('*') > -1) {
-                tbody += '<input id="' + token + '-yes" type="radio" name="'
-                + token + '"value="true" selected>Yes</input>'
-                + '<input id="' + token + '-no" type="radio" name="'
-                + token + '" value="false">No</input>';
-            } else {
                 tbody += '<input id="' + elTitle + '-yes" type="radio" name="'
                 + token + '"value="true">Yes</input>'
-                + '<input id="' + token + '-no" type="radio" name="'
-                + token + '" value="false" selected>No</input>';
-            }
-            */
-                tbody += '<input id="' + token + '-yes" type="radio" name="'
-                + token + '"value="true">Yes</input>'
-                + '<input id="' + token + '-no" type="radio" name="'
+                + '<input id="' + elTitle + '-no" type="radio" name="'
                 + token + '" value="false" checked>No</input>';
             tbody += '</td>'
-            + '<td><select id="' + token + '-validator">'
+            + '<td><select id="' + elTitle + '-validator">'
               + '<option value="none">none</option>'
               + '<option value="alpha-string">alpha-string</option>'
               + '<option value="us-phone">us-phone</option>'
               + '<option value="email">email</option>'
               + '<option value="confirm">confirm</option>'
             + '</select></td>'
-            + '<td><textarea id="' + token + '-hint" cols="100" rows="2"></textarea><td>'
+            + '<td><textarea id="' + elTitle + '-hint" cols="100" rows="2"></textarea><td>'
             + '</tr>';
 
     });
     $('tbody.table-body#config-table-body').html(tbody);
     buttonDiv.insertAfter('div.editor#field-table');
+
+    // Get current settings
+    $.ajax({
+        type: "GET",
+        url: 'http://127.0.0.1:8124/page?site_name=samHelper&page_name=' +
+                encodeURIComponent( pageToken),
+        dataType: "html",
+    }).done(function(msg) {
+      $.each(JSON.parse(msg).form_fields, function(index, field) {
+        $('tr.field-record[id="' + field.token + '"] td select[id="' +
+                    field.token + '-validator"]').val(field.validator.type);
+        $('tr.field-record[id="' + field.token + '"] td textarea[id="' +
+                    field.token + '-hint"]').text(field.quickHint);
+      });
+      console.log(msg);
+    }).fail(function() {
+      alert('failed to ping the file merger');
+      });
+
     $('tr.field-record').on("mouseenter", function() {
         $('input[title="' + $(this).attr('id') + '"]').
                     css('background-color', 'red');
@@ -115,9 +121,22 @@ $(document).ready(function() {
                     quickHint: $('textarea#' + token + '-hint').val()
                 });
         });
-        console.log('config complete');
-        console.log(JSON.stringify(pageConfiguration));
+        var configAsString = JSON.stringify(pageConfiguration);
         var configWin = window.open();
+
+        // Post the new data
+        $.ajax({
+            type: "POST",
+            url: 'http://127.0.0.1:8124/page?site_name=samHelper&page_name=' +
+                    encodeURIComponent( pageToken),
+            dataType: "html",
+            data: configAsString
+        }).done(function(msg) {
+          console.log(msg);
+          alert(msg);
+        }).fail(function() {
+          alert('failed to ping the file merger');
+          });
 
         configWin.document.title='Configuration Results';
         var configHeader =
@@ -128,9 +147,9 @@ $(document).ready(function() {
 
         $(configWin.document.documentElement).children('head').html(configHeader);
 
+        localStorage.pageToken = configAsString;
         $(configWin.document.body).html('<div id="config">' +
-                JSON.stringify(pageConfiguration)) +
-                '</div>';
+                configAsString + '</div>');
                 /*
         var range = Win.document.createRange();
         range.selectNodeContents(Win.document.getElementById("config");

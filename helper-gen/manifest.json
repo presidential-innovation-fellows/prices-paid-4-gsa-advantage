@@ -3,7 +3,12 @@
   "version" : "0.1.0",
   "description" : "extract the key words and generate a configuration",
   "background" : { "page": "background.html" },
-  "permissions" : [ "storage", "tabs", "https://www.sam.gov/*" ],
+  "permissions" : [
+          "storage",
+          "tabs",
+          "https://www.sam.gov/*",
+          "http://127.0.0.1:8124/*"
+  ],
   "page_action": {
     "default_icon": {                  
     "19": "icon19.png",          
@@ -16,14 +21,13 @@
   "content_scripts": [
 	   {
 	   "matches": ["https://www.sam.gov/*"],
-       "css": [ "samHelper.css" ],
+       "css": [ "configHelper.css" ],
 	   "js": [ "jquery-1.10.2.js", "configureHelper.js"]
 	   }
   ],
   "minimum_chrome_version" : "6.0.0.0",
   "manifest_version": 2,
   "web_accessible_resources": [
-      "samHelper.html",
       "samHelper.json"
   ]
 }
