@@ -1,16 +1,17 @@
-// inject 2.json into 1.json and write the output to stdout
+// trivial node.js server to handles file operations for config helper
 
-console.log('starting server at "http:127.0.0.1:8124"');
-console.log('curl http://127.0.0.1:8124 -d <your data>');
+var serverInfo = "GET '/page?site_name=<site_name>'\n" +
+    "POST '/page?site_name=<site_name>&page_name=<page_name>'\n";
+
+console.log('starting server at "http:127.0.0.1:8124"\n');
+console.log(serverInfo);
 
 fs = require('fs');
 var http = require('http');
 
 http.createServer(function (request, response) {
   var parsedUrl = require('url').parse(request.url, true);
-  console.log('HTTP method:j ' + request.method);
-  console.log('request has parsed URL:\n');
-  console.log(parsedUrl);
+  console.log('received HTTP ' + request.method + ': ' + parsedUrl.path);
   switch (parsedUrl.pathname) {
     case '/site':
     break;
@@ -35,17 +36,9 @@ http.createServer(function (request, response) {
   }
 }).listen(8124);
 
-function doPostPage(parsedUrl, request, response) {
-      var postData = "";
-      request.setEncoding("utf8");
-      request.addListener("data", function(chunk) {
-          postData += chunk;
-      });
-      request.addListener("end", function() {
-          console.log('POST BEGINS:\n' + postData + '\nPOST ENDS');
-          response.writeHead(200, {'Content-Type': 'text/plain'});
-          response.end('<div>Success</div>');
-      });
+function doDefault(parsedUrl, request, response) {
+      response.writeHead(200, {'Content-Type': 'text/plain'});
+      response.end('<div>' + request.method + ' Not Serviced</div>');
 }
 
 function doGetPage(parsedUrl, request, response) {
@@ -67,46 +60,37 @@ function doGetPage(parsedUrl, request, response) {
     });
 }
 
-function doDefault(parsedUrl, request, response) {
-      response.writeHead(200, {'Content-Type': 'text/plain'});
-      response.end('<div>' + request.method + ' Not Serviced</div>');
-}
-
-
-    /*
-
-var file1, file2;
-var masterFile, injectFile;
-
-fs.readFile('1.json', 'utf8', function (err,data) {
-  if (err) {
-      return console.log('1.json' + err);
-  }
-  masterFile = JSON.parse(data);
-  if (masterFile.title !== 'Sam Helper Configuration') {
-    console.log('ERROR: 1.json is not a SAM Helper Configuration file');
-  } else {
-      fs.readFile('2.json', 'utf8', function (err,data) {
+function doPostPage(parsedUrl, request, response) {
+      var site_name = parsedUrl.query.site_name;
+      var page_name = parsedUrl.query.page_name;
+      var postData = "";
+      fs.readFile(site_name + '.json', 'utf8', function (err,data) {
         if (err) {
-          return console.log('2.json' + err);
-        }
-        injectFile = JSON.parse(data);
-        if (!injectFile.page_name) {
-            console.log('ERROR: 1.json is not a SAM Helper Configuration file');
+            console.log(site_name + ': ' + err);
         } else {
-            for (var i=0; i < masterFile.pages.length; i++) {
-              if (masterFile.pages[i].page_name === injectFile.page_name) {
-                console.log('REPLACING PAGE: "' + injectFile.page_name + '"');
-                masterFile.pages.splice(i, 1);
+          var configFile = JSON.parse(data);
+          request.setEncoding("utf8");
+          request.addListener("data", function(chunk) {
+              postData += chunk;
+          });
+          request.addListener("end", function() {
+              for (var i=0; i < configFile.pages.length; i++) {
+                if (configFile.pages[i].page_name === postData.page_name) {
+                  console.log('REPLACING PAGE: "' + postData.page_name + '"');
+                  configFile.pages.splice(i, 1);
+                  break;
+                }
               }
-            }
-              console.log('INSERTING NEW PAGE: "' + injectFile.page_name + '"');
-              masterFile.pages.push(injectFile);
-              console.log('Modified file follows:\n*************************\n\n\n' +
-                        JSON.stringify(masterFile));
+              console.log('INSERTING NEW PAGE: "' + postData.page_name + '"');
+              configFile.pages.push(postData);
+              fs.renameSync(site_name + '.json', site_name + '.temporary');
+              fs.writeFile(site_name + '.json', JSON.stringify(configFile), encoding='utf8');
+              console.log('RENAME: ' + site_name + '.json to ' + site_name + '.' +
+                        new Date().toISOString() + '.json');
+              fs.renameSync(site_name + '.temporary', site_name + '.' + new Date().toISOString() + '.json');
+              response.writeHead(200, {'Content-Type': 'text/plain'});
+              response.end(JSON.stringify(configFile.pages[i]));
+          });
         }
-     });
-  }
-});
-
-*/
+      });
+}

@@ -26,7 +26,6 @@ $(document).ready(function() {
     var handleFieldDiv =
         $('<div class="shadow-editor" id="shadow-frame"></div>'
             + '<div class="editor" id="editor-frame">'
-            + '<h2 class="table-title">Configure Fields</h2>' 
             + '<div class="editor" id="field-table">'
             + '<table class="editor" id="field-table">'
             + '<thead class="table-header" id="config-table-header"><tr>'
@@ -36,17 +35,9 @@ $(document).ready(function() {
             + '</table>'
             + '</div>'
             + '</div>');
-    handleFieldDiv.css({
-        "min-width": "400",
-        "font-size": "1.25em",
-        "min-height": "400",
-        "background-color": "gray",
-        "color": "white",
-        "border": "solid red 2px"
-    });
     var buttonDiv =
-        $('<button type="button" id="generate">Generate Config File</button>'
-            + '<button type="button" id="close">Close</button>');
+        $('<div id="edit-buttons"><p><button type="button" id="generate">Generate Config File</button>'
+            + '</p><p><button type="button" id="close">Close</button></p></div>');
     buttonDiv.css('font-size', '1.2em');
     $('body').prepend(handleFieldDiv); // find all of the input elements
     var tbody = '';
@@ -70,7 +61,7 @@ $(document).ready(function() {
               + '<option value="email">email</option>'
               + '<option value="confirm">confirm</option>'
             + '</select></td>'
-            + '<td><textarea id="' + elTitle + '-hint" cols="100" rows="2"></textarea><td>'
+            + '<td><textarea id="' + elTitle + '-hint" cols="100" rows="1"></textarea><td>'
             + '</tr>';
 
     });
@@ -90,7 +81,6 @@ $(document).ready(function() {
         $('tr.field-record[id="' + field.token + '"] td textarea[id="' +
                     field.token + '-hint"]').text(field.quickHint);
       });
-      console.log(msg);
     }).fail(function() {
       alert('failed to ping the file merger');
       });
@@ -122,7 +112,6 @@ $(document).ready(function() {
                 });
         });
         var configAsString = JSON.stringify(pageConfiguration);
-        var configWin = window.open();
 
         // Post the new data
         $.ajax({
@@ -133,31 +122,9 @@ $(document).ready(function() {
             data: configAsString
         }).done(function(msg) {
           console.log(msg);
-          alert(msg);
         }).fail(function() {
           alert('failed to ping the file merger');
-          });
-
-        configWin.document.title='Configuration Results';
-        var configHeader =
-            '<meta http-equiv="Content-Type" content="text/html;charset=utf-8">\n' +
-            '<script>' +
-            'var foo="bar"' +
-            '</script>';
-
-        $(configWin.document.documentElement).children('head').html(configHeader);
-
-        localStorage.pageToken = configAsString;
-        $(configWin.document.body).html('<div id="config">' +
-                configAsString + '</div>');
-                /*
-        var range = Win.document.createRange();
-        range.selectNodeContents(Win.document.getElementById("config");
-        var sel = configWin.getSelection();
-        sel.removeAllRanges();
-        sel.addRange(range);
-        */
-
+        });
     });
     $('button#close').on("click", function() {
         handleFieldDiv.remove();
