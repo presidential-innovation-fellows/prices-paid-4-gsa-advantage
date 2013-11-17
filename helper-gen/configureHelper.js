@@ -36,7 +36,7 @@ $(document).ready(function() {
             + '</div>'
             + '</div>');
     var buttonDiv =
-        $('<div id="edit-buttons"><p><button type="button" id="generate">Generate Config File</button>'
+        $('<div id="edit-buttons"><p><button type="button" id="generate">Save Changes</button>'
             + '</p><p><button type="button" id="close">Close</button></p></div>');
     buttonDiv.css('font-size', '1.2em');
     $('body').prepend(handleFieldDiv); // find all of the input elements
@@ -45,16 +45,16 @@ $(document).ready(function() {
         var elTitle = $(element).attr("title");
         var token = elTitle.replace(/[^A-Za-z0-9]/g, '_');
         tbody += '<tr class="field-record" id="'
-            + elTitle + '" token ="' + token + '">'
+            + elTitle + '" token ="' + elTitle + '">'
             + '<td>' + elTitle + '</td>'
             + '<td id="' + elTitle + '-required">';
 
                 tbody += '<input id="' + elTitle + '-yes" type="radio" name="'
-                + token + '"value="true">Yes</input>'
+                + elTitle + '"value="true">Yes</input>'
                 + '<input id="' + elTitle + '-no" type="radio" name="'
-                + token + '" value="false" checked>No</input>';
+                + elTitle + '" value="false" checked>No</input>';
             tbody += '</td>'
-            + '<td><select id="' + elTitle + '-validator">'
+            + '<td><select id="' +elTitle + '-validator">'
               + '<option value="none">none</option>'
               + '<option value="alpha-string">alpha-string</option>'
               + '<option value="us-phone">us-phone</option>'
@@ -99,16 +99,16 @@ $(document).ready(function() {
                 token = $(element).attr('token');
             var required = $('input[type=radio][name="'
                 + token + '"]:checked').val();
-            selected = $('select#' + token + '-validator');
+            selected = $('select[id="' + token + '-validator"]');
             var quickHint
-                = $('textarea#' + token + '-hint').val();
+                = $('textarea[id="' + token + '-hint"]').val();
             pageConfiguration.form_fields.push( {
                     token: token,
                     required: $('input[type=radio][name="' + token +
                                     '"]:checked').val(),
-                    validator: { type: $('select#' + token +
-                                '-validator').val() },
-                    quickHint: $('textarea#' + token + '-hint').val()
+                    validator: { type: $('select[id="' + token +
+                                '-validator"]').val() },
+                    quickHint: $('textarea[id="' + token + '-hint"]').val()
                 });
         });
         var configAsString = JSON.stringify(pageConfiguration);
@@ -121,7 +121,8 @@ $(document).ready(function() {
             dataType: "html",
             data: configAsString
         }).done(function(msg) {
-          console.log(msg);
+          // console.log(msg);
+          alert('Changes saved');
         }).fail(function() {
           alert('failed to ping the file merger');
         });
