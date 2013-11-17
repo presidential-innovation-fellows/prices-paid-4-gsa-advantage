@@ -5,8 +5,10 @@
 //
 // It requires usdsJsHelper.js be loaded before execution
 
+chrome.storage.local.get( 'helperMode', function ( items ) {
+if (true) {
+// if (items.helperMode && items.helperMode === 'help') {
 $(document).ready(function() {
-
     // define the insertion points
     var usdsJsHelper = new UsdsJsHelper();
     var insertionPoints = {
@@ -43,11 +45,12 @@ $(document).ready(function() {
     // Get the field data (for now, from a file, someday from MO server)
     $.ajax({
         type: "GET",
-        url: chrome.extension.getURL("samHelper.json"),
+        url: 'http://127.0.0.1:8124/page?site_name=samHelper&page_name=' + pageToken,
         dataType: "json"
     }).done(function(msg) {
-      usdsJsHelper.loadFieldHandlers(pageToken, msg);
-      progress = usdsJsHelper.progressForPage(pageToken, msg);
+      usdsJsHelper.loadFieldHandlersForPage(msg);
+      progress = msg.progress;
+      // progress = usdsJsHelper.progressForPage(pageToken, msg);
     }).fail(function() {
       alert('failed to read JSON field data');
     });
@@ -152,4 +155,6 @@ $(document).ready(function() {
     } else {
         $('div#busa-main').slideUp();
     }
+});
+}
 });

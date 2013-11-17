@@ -74,15 +74,16 @@ function doPostPage(parsedUrl, request, response) {
               postData += chunk;
           });
           request.addListener("end", function() {
+              var pageObject = JSON.parse(postData);
               for (var i=0; i < configFile.pages.length; i++) {
-                if (configFile.pages[i].page_name === postData.page_name) {
-                  console.log('REPLACING PAGE: "' + postData.page_name + '"');
+                if (configFile.pages[i].page_name === pageObject.page_name) {
+                  console.log('REPLACING PAGE: "' + pageObject.page_name + '"');
                   configFile.pages.splice(i, 1);
                   break;
                 }
               }
-              console.log('INSERTING NEW PAGE: "' + postData.page_name + '"');
-              configFile.pages.push(postData);
+              console.log('INSERTING NEW PAGE: "' + pageObject.page_name + '"');
+              configFile.pages.push(pageObject);
               fs.renameSync(site_name + '.json', site_name + '.temporary');
               fs.writeFile(site_name + '.json', JSON.stringify(configFile), encoding='utf8');
               console.log('RENAME: ' + site_name + '.json to ' + site_name + '.' +

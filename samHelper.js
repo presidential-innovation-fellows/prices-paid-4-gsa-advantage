@@ -45,7 +45,8 @@ $(document).ready(function() {
     // Get the field data (for now, from a file, someday from MO server)
     $.ajax({
         type: "GET",
-        url: chrome.extension.getURL("samHelper.json"),
+        // url: chrome.extension.getURL("samHelper.json"),
+        url: 'http://127.0.0.1:8124?site_name=samHelper&page_name=' + pageToken,
         dataType: "json"
     }).done(function(msg) {
       usdsJsHelper.loadFieldHandlers(pageToken, msg);

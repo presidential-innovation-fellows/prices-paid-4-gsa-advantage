@@ -17,11 +17,15 @@ UsdsJsHelper.prototype.loadFieldHandlers = function(pageId, siteData) {
         var currentPage, pos, RIGHT_SHIFT_AMOUNT;
         $.each(siteData.pages, function(index, page) {
             if (page.page_name === pageId) {
-                currentPage = page;
+                UsdsJsHelper.loadFieldHandlersForPage(page);
                 return false;
             }
             return true;
         });
+}
+
+UsdsJsHelper.prototype.loadFieldHandlersForPage = function(currentPage) {
+
         if ((currentPage !== undefined) && (currentPage.form_fields !== undefined)) {
             $.each(currentPage.form_fields, function(text, field) {
                 $('input[title="' + field.token + '"]').on('mouseenter mouseleave focus focusout',
