@@ -95,10 +95,12 @@ $(document).ready(function() {
     $('tr.field-record').on("mouseenter", function() {
         $('input[title="' + $(this).attr('id') + '"]').
                     css('background-color', 'red');
+        $(this).css('background-color', '#cccccc');
     });
     $('tr.field-record').on("mouseleave", function() {
         $('input[title="' + $(this).attr('id') + '"]').
                     css('background-color', '');
+        $(this).css('background-color', '');
     });
         // tbody += '<tr class="field-record" id="site-help">'
     $('button#generate').on("click", function() {
