@@ -54,10 +54,6 @@ $(document).ready(function() {
       usdsJsHelper.loadFieldHandlersForPage(msg);
       progress = msg.progress;
       // progress = usdsJsHelper.progressForPage(pageToken, msg);
-    }).fail(function() {
-      alert('failed to read JSON field data');
-    });
-
     // Get the content for the help items
     var pageContent;
     $.ajax({
@@ -158,6 +154,10 @@ $(document).ready(function() {
     } else {
         $('div#busa-main').slideUp();
     }
+    }).fail(function() {
+      alert('failed to read JSON field data');
+    });
+
 });
 }
 });
