@@ -15,14 +15,17 @@ $(document).ready(function() {
         samInsertionPoint: $('#UIPortalApplication'),
         busa_main_div: $('<div class="busa" id="busa-main"><div id="busa-content"></div></div>'),
         busa_toggle_div:
-        $('<div class="busa"><p><a href="#" id="busa-toggle">Minimize the SAM Helper</a></p></div>'),
+        $('<div class="busa" id="busa-toggle-div"><p><a href="#" id="busa-toggle">Minimize the SAM Helper</a></p></div>'),
         quickHintDiv:
             $('<div class="quick_hint" id="display-hover-text"></div>'),
         progressDiv: $('<div class="progress" id="progress"></div>')
     };
     insertionPoints.busa_main_div.insertBefore(insertionPoints.samInsertionPoint);
-    insertionPoints.busa_toggle_div.insertAfter(insertionPoints.busa_main_div);
+    $('body').prepend('<div id="help-shadow"></div>');
+    $('body').prepend(insertionPoints.busa_toggle_div);
     insertionPoints.quickHintDiv.insertAfter(insertionPoints.busa_toggle_div);
+    $('div#help-shadow').css({'height':
+            $('div.busa#busa-main').css('height')});
 
     if (sessionStorage.getItem("visible") == null) {
     	sessionStorage.setItem("visible", 'true');
@@ -135,11 +138,11 @@ $(document).ready(function() {
     // define toggle/click/slide behavior
     $('#busa-toggle').click(function() {
         if ( $('div#busa-main').is(":visible") ) {
-            $('div#busa-main').slideUp();
+            $('div#busa-main, div#help-shadow').slideUp();
             $(this).text("View assistance for " + page_name);
 	    sessionStorage.usdsJsHelperVisible = 'false';
         } else {
-            $('div#busa-main').slideDown();
+            $('div#busa-main, div#help-shadow').slideDown();
             $(this).text("Minimize the SAM Helper");
 	    sessionStorage.usdsJsHelperVisible = 'true';
         }

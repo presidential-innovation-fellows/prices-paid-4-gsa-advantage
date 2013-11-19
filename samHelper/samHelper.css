@@ -36,9 +36,8 @@ div#busa-main {
   background-color: 0xcccccc;
 }
 
-#busa-xtoggle {
-  min-height: 2em;
-  z-index: 10000;
+div.busa#busa-toggle-div {
+    position: static;
 }
 
 div#busa-toggle {
