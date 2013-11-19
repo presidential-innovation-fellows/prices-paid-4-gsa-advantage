@@ -28,9 +28,6 @@ $(document).ready(function() {
             + '<div class="editor" id="editor-frame">'
             + '<div class="editor" id="field-table">'
             + '<table class="editor" id="field-table">'
-            + '<thead class="table-header" id="config-table-header"><tr>'
-            + '<td>Field</td><td>Required</td><td>Validator</td><td>Quick Hint</td></tr>'
-            + '</thead>'
             + '<tbody class="table-body" id="config-table-body"></tbody>'
             + '</table>'
             + '</div>'
@@ -41,27 +38,33 @@ $(document).ready(function() {
     buttonDiv.css('font-size', '1.2em');
     $('body').prepend(handleFieldDiv); // find all of the input elements
     var tbody = '';
+        tbody += '<tr class="field-record" id="page-help">'
+            + '<td class="field-item" class="field-item-name">Page Help</td>'
+            + '<td class="field-item" class="field-item-value"colspan="6"><textarea id="page-help-text" cols="200" rows="2"></textarea></td>'
+            + '</tr>';
     $('input[title]').each(function(index, element) {
         var elTitle = $(element).attr("title");
         var token = elTitle.replace(/[^A-Za-z0-9]/g, '_');
         tbody += '<tr class="field-record" id="'
             + elTitle + '" token ="' + elTitle + '">'
-            + '<td>' + elTitle + '</td>'
-            + '<td id="' + elTitle + '-required">';
-
-                tbody += '<input id="' + elTitle + '-yes" type="radio" name="'
+            + '<td class="field-item field-item-name">' + elTitle + '</td>'
+            + '<td class="field-item field-item-name"><p>Required</p></td>'
+            + '<td class="field-item field-item-value" id="' + elTitle + '-required">'
+                + '<input id="' + elTitle + '-yes" type="radio" name="'
                 + elTitle + '"value="true">Yes</input>'
                 + '<input id="' + elTitle + '-no" type="radio" name="'
                 + elTitle + '" value="false" checked>No</input>';
             tbody += '</td>'
-            + '<td><select id="' +elTitle + '-validator">'
+            + '<td class="field-item field-item-name">Validation</td>'
+            + '<td class="field-item field-item-value"><select id="' +elTitle + '-validator">'
               + '<option value="none">none</option>'
               + '<option value="alpha-string">alpha-string</option>'
               + '<option value="us-phone">us-phone</option>'
               + '<option value="email">email</option>'
               + '<option value="confirm">confirm</option>'
             + '</select></td>'
-            + '<td><textarea id="' + elTitle + '-hint" cols="100" rows="1"></textarea><td>'
+            + '<td class="field-item field-item-name">Hint</td>'
+            + '<td class="field-item field-item-value"><textarea id="' + elTitle + '-hint" cols="100" rows="1"></textarea><td>'
             + '</tr>';
 
     });
@@ -75,7 +78,11 @@ $(document).ready(function() {
                 encodeURIComponent( pageToken),
         dataType: "html",
     }).done(function(msg) {
-      $.each(JSON.parse(msg).form_fields, function(index, field) {
+      var asJson = JSON.parse(msg);
+      if (asJson.page_help) {
+        $('#page-help-text').html(asJson.page_help);
+      }
+      $.each(asJson.form_fields, function(index, field) {
         $('tr.field-record[id="' + field.token + '"] td select[id="' +
                     field.token + '-validator"]').val(field.validator.type);
         $('tr.field-record[id="' + field.token + '"] td textarea[id="' +
@@ -93,7 +100,14 @@ $(document).ready(function() {
         $('input[title="' + $(this).attr('id') + '"]').
                     css('background-color', '');
     });
+        // tbody += '<tr class="field-record" id="site-help">'
     $('button#generate').on("click", function() {
+        pageConfiguration.page_help = $('tr#page-help textarea').val();
+        if (pageConfiguration.history) {
+            pageConfiguration.history.push(new Date().toLocaleString());
+        } else {
+            pageConfiguration.history = [ new Date().toLocaleString() ];
+        }
         $('tr.field-record').each(function(index, element) {
             var selected,
                 token = $(element).attr('token');
