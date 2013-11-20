@@ -5,9 +5,7 @@
 //
 // It requires usdsJsHelper.js be loaded before execution
 
-chrome.storage.local.get( 'helperMode', function ( items ) {
-if (true) {
-// if (items.helperMode && items.helperMode === 'help') {
+if (!(localStorage.helperMode && localStorage.helperMode !== 'help')) {
 $(document).ready(function() {
     // define the insertion points
     var usdsJsHelper = new UsdsJsHelper();
@@ -20,7 +18,8 @@ $(document).ready(function() {
             $('<div class="quick_hint" id="display-hover-text"></div>'),
         progressDiv: $('<div class="progress" id="progress"></div>')
     };
-    insertionPoints.busa_main_div.insertBefore(insertionPoints.samInsertionPoint);
+    
+    // insertionPoints.busa_main_div.insertBefore(insertionPoints.samInsertionPoint);
     $('body').prepend('<div id="help-shadow"></div>');
     $('body').prepend(insertionPoints.busa_toggle_div);
     insertionPoints.quickHintDiv.insertAfter(insertionPoints.busa_toggle_div);
@@ -62,24 +61,40 @@ $(document).ready(function() {
         dataType: "html"
     }).done( function(data) {
         pageContent = usdsJsHelper.contentForPgItm(data, pageToken);
-        if ((pageContent !== undefined) && (pageContent.overview_text !== undefined)) {
+        if (msg.page_help) {
+            overviewText = '<div class="helper_item overview"' +
+            'title="overview_text"><p>' +
+            msg.page_help +
+            '</p></div>';
+        } else if ((pageContent !== undefined) && (pageContent.overview_text !== undefined)) {
             overviewText = pageContent.overview_text.outerHTML;
         } else {
             overviewText = ' ';
         }
-        $('div#busa-content').html( overviewText);
-        var helpDiv =$('<div class="helper_item help_info" title="help">\n\
-            <dl>\n\
-            <dt>Getting Help: Email</dt>\n\
-            <dd>\n\
-            <a href="mailto:help.with.sam@businessusa.gov">\n\
-            help.with.sam@businessusa.gov</a>\n\
-            </dd>\n\
-            <!-- <dt>see the MO workflow</dt>\n\-->\n\
-            <!-- <dd id="button-me"></dd>\n\ -->\n\
-            <!-- <dd id="wiz-me"></dd>\n\ -->\n\
-            </dl>\n\
-            </div>').insertAfter($('div#busa-content'));
+        var siteStuff =
+        usdsJsHelper.contentForPgItm(data, 'site_info');
+        $(siteStuff.site).insertBefore(insertionPoints.samInsertionPoint);
+        $('tbody tr.site_help_table_row#site_help_table_row ' +
+                        'td.site_help_table_item#page_section').
+                    html(overviewText);
+        var siteInfo ='<div class="helper_item help_info" title="help">' +
+            '<dl>' +
+            '<dt><p>Get Help:</p><p>Email</dt>' +
+            '<dd>' +
+            '<a href="mailto:sam-help@gsa.gov">' +
+            'sam-help@gsa.gov</a>' +
+            '</dd>' +
+            '<dd>' +
+            '1-800-xxx-xxxx</a>' +
+            '</dd>' +
+            '</dl>' +
+            '</div>';
+        $('tbody tr.site_help_table_row#site_help_table_row ' +
+                        'td.site_help_table_item#site_section').
+                    html(siteInfo);
+        $('tbody tr.site_help_table_row#site_help_table_row ' +
+                        'td.site_help_table_item#progress_section').
+                    html('<p>Progress:</p><p>' + progress + '%</p>');
 
         $('dd#button-me').html( '<button id="view-workflow" name="show-mo" type="button">View</button>');
         $('dd#button-me').click(function() {
@@ -95,12 +110,11 @@ $(document).ready(function() {
         if (progress === undefined) {
             progress = 'calculating';
         }
-        $(insertionPoints.progressDiv).html('Progress: ' + progress + ' %');
-        $(insertionPoints.progressDiv).insertAfter($(helpDiv));
     }).fail(function(jqXHR, textStatus) {
         alert('failed to read page content');
     });
 
+    /*
     // you could even blank out wrong choices!
     if (pageToken === 'Create_an_AccountChoose_Account_Type_') {
         $('div.sub_heading').text("");
@@ -122,8 +136,8 @@ $(document).ready(function() {
                           return $(this).css('float') == 'right';
                                          });
         itemToHide.prepend($(hideSysAccount));
-         */
     }
+         */
     // read the JSON workflow data
     sessionStorage.processMap = '{}';
     $.getJSON('http://mo.tynsax.com/api/operations/sam-system-of-award-management-registration-process/map',
@@ -133,12 +147,12 @@ $(document).ready(function() {
 
     // define toggle/click/slide behavior
     $('#busa-toggle').click(function() {
-        if ( $('div#busa-main').is(":visible") ) {
-            $('div#busa-main, div#help-shadow').slideUp();
+        if ( $('div.helper_item[title="site"]').is(":visible") ) {
+            $('div.helper_item[title="site"], div#help-shadow').slideUp();
             $(this).text("View assistance for " + page_name);
 	    sessionStorage.usdsJsHelperVisible = 'false';
         } else {
-            $('div#busa-main, div#help-shadow').slideDown();
+            $('div.helper_item[title="site"], div#help-shadow').slideDown();
             $(this).text("Minimize the SAM Helper");
 	    sessionStorage.usdsJsHelperVisible = 'true';
         }
@@ -160,4 +174,3 @@ $(document).ready(function() {
 
 });
 }
-});

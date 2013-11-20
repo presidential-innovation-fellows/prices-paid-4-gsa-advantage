@@ -5,8 +5,8 @@
 //
 // It requires usdsJsHelper.js be loaded before execution
 
-chrome.storage.local.get( 'helperMode', function ( items ) {
-if (items.helperMode && items.helperMode === 'configure') {
+// if (localStorage.helperMode && localStorage.helperMode === 'configure') {
+if (true) {
 $(document).ready(function() {
 
     // create the page token
@@ -78,11 +78,11 @@ $(document).ready(function() {
                 encodeURIComponent( pageToken),
         dataType: "html",
     }).done(function(msg) {
-      var asJson = JSON.parse(msg);
-      if (asJson.page_help) {
-        $('#page-help-text').html(asJson.page_help);
+      pageConfiguration = JSON.parse(msg);
+      if (pageConfiguration.page_help) {
+        $('#page-help-text').html(pageConfiguration.page_help);
       }
-      $.each(asJson.form_fields, function(index, field) {
+      $.each(pageConfiguration.form_fields, function(index, field) {
         $('tr.field-record[id="' + field.token + '"] td select[id="' +
                     field.token + '-validator"]').val(field.validator.type);
         $('tr.field-record[id="' + field.token + '"] td textarea[id="' +
@@ -118,6 +118,12 @@ $(document).ready(function() {
             selected = $('select[id="' + token + '-validator"]');
             var quickHint
                 = $('textarea[id="' + token + '-hint"]').val();
+            $.each(pageConfiguration.form_fields, function(index, field) {
+                if (field.token === token) {
+                    pageConfiguration.form_fields.splice(index, 1);
+                    return false;
+                }
+            });
             pageConfiguration.form_fields.push( {
                     token: token,
                     required: $('input[type=radio][name="' + token +
@@ -156,4 +162,3 @@ $(document).ready(function() {
     });
 });
 }
-});

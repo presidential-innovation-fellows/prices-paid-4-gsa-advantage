@@ -12,18 +12,18 @@
   font-size: 125%;
 }
 
-.busa a:link {
+x.busa a:link {
   color: lightblue;
 }
 
-.busa a:visited {
+x.busa a:visited {
   color: lightpink;
 }
 
-.busa a:active {
+x.busa a:active {
   color: red;
 }
-.busa a:hover {
+x.busa a:hover {
   color: lavender;
 }
 
@@ -79,14 +79,14 @@ div.busa div.help_info {
 
 body div.quick_hint#display-hover-text {
     position: absolute;
-    background-color: red;
-    margin: 5px;
+    background-color: #cacaca;
+    border: solid red 2px;
+    margin: 3px;
     padding-right: 20 px;
-    color: white;
-    line-height:1.3;
-    font-size: 1.0em;
+    color: black;
+    font-family: "Lucinda Grande",Arial,sans-serif;
+    font-size: 11px;
     z-index: 20000;
-    visibility: visible;
 }
 div.progress#progress {
     clear:both;
@@ -97,4 +97,60 @@ div.progress#progress {
     margin: 3px;
     padding: 2px;
     width: 250px;
+}
+
+div.busa#busa-main {
+border-left: solid black 2px;
+border-bottom: solid black 2px;
+border-right: solid black 2px;
+background-color: #cacaca;
+}
+
+div#busa-content div.helper_item.overview {
+    padding: 5px 3px;
+}
+
+div.helper_item.overview p {
+    padding: 5px 3px;
+    font-family: "Lucinda Grande",Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 80%;
+    background-color: #cacaca;
+    color: black;
+}
+
+div.helper_item.help_info {
+    border: solid black 3px;
+    padding: 5px 3px;
+    font-family: "Lucinda Grande",Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 80%;
+    background-color: #cacaca;
+    color: black;
+}
+
+div.helper_item table#site_help_table {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+tr.site_help_table_row#site_help_table_row td#progress_section {
+    text-align: right;
+    border-right: solid #666666 5px;
+    padding: 8px;
+    width: 150px;
+}
+
+tr.site_help_table_row#site_help_table_row td#progress_section p {
+    line-height: 90%;
+}
+
+tr.site_help_table_row#site_help_table_row td#site_section {
+    border-left: solid #666666 5px;
+    padding: 8px;
+    width: 150px;
+}
+
+tr.site_help_table_row#site_help_table_row td#site_section div.helper_item {
+    border: none;
 }

@@ -7,27 +7,29 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+var samHelperExtId = 'edjkgghfdhoigijgofhpdblffonglmda';
+
 function settingChanged() {
-    chrome.storage.local.set( { helperMode: this.value } );
+    localStorage.helperMode = this.value;
+    chrome.runtime.sendMessage(samHelperExtId, this.value);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  chrome.storage.local.get( 'helperMode', function ( items ) {
-    if (items.helperMode) {
-        var dd = document.getElementById('mode');
-        for (var i = 0; i < dd.options.length; i++) {
-            if (dd.options[i].text === items.helperMode) {
-                dd.selectedIndex = i;
-                break;
-            }
+  
+    var helperMode = (localStorage.helperMode) ?
+           localStorage.helperMode :  "help";
+
+    alert('retrieved ' + helperMode);
+    var dd = document.getElementById('mode');
+    alert('dd = ' + dd);
+    for (var i = 0; i < dd.options.length; i++) {
+        if (dd.options[i].text === helperMode) {
+            dd.selectedIndex = i;
+            break;
         }
     }
+
+    var select = document.querySelector('select#mode');
+    select.addEventListener('change', settingChanged);
   });
-
-  var selects = document.querySelectorAll('select');
-  for (var i = 0; i < selects.length; i++) {
-    selects[i].addEventListener('change', settingChanged);
-  }
-});
-

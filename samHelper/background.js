@@ -2,6 +2,12 @@
 // For details of its behavior, refer to the documentation for Chrome extensions
 // This file lives at: https://github.com/GSA-OCSIT/sam-helper
 
+// Handle a command from the configuration extension
+chrome.runtime.onMessageExternal.addListener(
+      function(request, sender, sendResponse) {
+            localStorage.helperMode = request;
+});
+
 // Handle a command from a user page
 // request object properties:
 //	"command" : "get-json-from-url" | "signs-of-life"	(maybe more later?)
