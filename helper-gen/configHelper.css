@@ -1,0 +1,59 @@
+/*  This file contains styles applied to the Config Helper content */
+/*  This file lives at: https://github.com/GSA-OCSIT/? */
+
+h2.table-title {
+    visibility: hidden;
+    padding: 7px;
+    font-family: "Lucinda Grande",Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 80%;
+}
+
+body div.shadow-editor#shadow-frame {
+    height: 150px;
+}
+
+body div.editor#editor-frame {
+    position:fixed;
+    background-color: #eeeeee;
+    top: 0px;
+    z-index: 1000;
+    width: 100%;
+    height: 150px;
+    border: solid #ddeeaa 5px;
+}
+
+body div.editor#editor-frame div.editor#field-table {
+    width: auto;
+    margin-left: 50px;
+    height: 150px;
+    background-color: #eeeeee;
+    color: black;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body div.editor#editor-frame div.editor#field-table {
+    width: auto;
+}
+
+div.editor table.editor tbody.table-body tr.field-record td.field-item {
+    width: auto;
+}
+
+div.editor table.editor tbody.table-body tr.field-record td.field-item p {
+    width: auto;
+}
+
+td.field-item-name {
+}
+
+td.field-item-value {
+}
+
+div#edit-buttons {
+    position:fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
