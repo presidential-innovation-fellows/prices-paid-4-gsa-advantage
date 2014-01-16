@@ -164,8 +164,8 @@ div.adv-helper#item-results-toggler p#toggler {
 div.adv-helper#item-results-expanded {
     border: solid gray 2px;
     background-color: #fafafa;
-    visibility: hidden;
-    position:absolute;
+    visibility: visible;
+    position: static;
 }
 div.adv-helper#credentials {
     border: solid gray 2px;
