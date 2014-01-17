@@ -47,7 +47,7 @@
            p3password: p3password
            };
 
-      $.getJSON( ppSecrets.ppUrl, jsonReqData, handleSearchResult);
+      $.getJSON( 'https://pricespaid.acquisition.gov/apisolr', jsonReqData, handleSearchResult);
     }
 
     var searchQuals = [ "Mfr Part No", "Manufacturer", "Disaster Recovery"];
@@ -75,45 +75,26 @@
 
     function onItemTemplateLoaded(data) {
          var resultsToDisplay = '';
+         var hidden = false;
          $(data).insertBefore('div#sectionheader');
+         $('p#toggler').click(function() {
+            if (hidden === false) {
+                $('div#results').slideUp();
+                hidden = true;
+                $('p#toggler').text('Click Here to Expand');
+            }
+            else {
+                $('div#results').slideDown();
+                hidden = false;
+                $('p#toggler').text('Click Here to Hide');
+            }
+         });
          var itemTitle = $(advantage.queries.itemSearch);
          var itemQueryStr = itemTitle.text();
-         var searchParams =
-            '<thead id="search-params-header">' +
-                '<td>Select</td>' +
-                '<td>Qualifier</td>' +
-                '<td>Value</td>' +
-                '<td></td>' +
-                '<td>Select</td>' +
-                '<td>Custom Field</td>' +
-                '<td>Value</td>' +
-            '</thead>';
-         $.each(searchQuals, function(index, value) {
-            searchParams +=
-                '<tr class="search-result-class">' +
-                    '<td><input type="checkbox"></button></td>' +
-                    '<td>' +
-                        value +
-                    '</td>' +
-                    '<td><input type="textfield"></input></td>' +
-                    '<td></td>' +
-                    '<td><input type="checkbox"></button></td>' +
-                    '<td><input type="textfield" placeholder="Custom"></input></td>' +
-                    '<td><input type="textfield"></input></td>' +
-                '<tr>';
-         });
-              /*
-              var credentialsBox =
-                  $('div.adv-helper#credentials');
-              var expandedResults =
-                  $('div.adv-helper#item-results-expanded');
-          */
-         $('table.item-match-table#params tbody').html(searchParams);
 
          $('div.adv-helper#item-results-expanded p#search-results').
                 text('Searched for "' + itemQueryStr + '"');
-         searchMe(buildQueryString(itemQueryStr,
-                    retrieveSearchParams()),3, function (data) {
+         searchMe(itemQueryStr, 3, function (data) {
              $.each(data, function(index, value) {
                   var itemTd = '<td class="search-result-class">';
                       resultsToDisplay +=
@@ -126,42 +107,23 @@
                       '<td class="search-result-class popup-info" id="' +
                               index + '">' + 'More&hellip;' + '</td>' + '</tr>';
              });
-             $('table.item-match-table#item-match-table tbody').
+             $('table#item-match-table tbody').
                         html(resultsToDisplay);
              $('td.popup-info').on('click', function () {
                 var item = $(this).attr('id');
                 var popupContent =
-                    '<div class="advantage-popup"><p>' +
+                    '<div class="more-info""><p>' +
                         data[item].longDescription +
                         '</p><p id="click-to-dismiss">' +
                         '&lsaquo;Click to dismiss&rsaquo;</p>' +
                         '</div>';
                     $(popupContent).insertBefore('td.popup-info#' +
                         item);
-                $('div.advantage-popup').on('click', function () {
+                $('div.more-info').on('click', function () {
                     $(this).remove();
                 });
              });
         });
-    }
-
-    function buildQueryString(userEntry, extraParams) {
-        var queryString = userEntry;
-
-        if (extraParams) {
-            $.each(extraParams, function(index, value) {
-                queryString += '&' + index + '=' + value;
-            });
-        }
-        return queryString;
-    }
-
-    function retrieveSearchParams() {
-        var params = null;
-        if (localStorage && localStorage.searchParams) {
-            params = JSON.parse(localStorage.searchParams);
-        }
-        return params;
     }
 
     function templateLoadFailed( jqXHR, textStatus, errorThrown ) {
@@ -203,7 +165,7 @@
         },
         function(response) {
             if (arguments.length === 0) {
-                alert('chrome.runtime.sendMessage() returned: ' + lastError);
+                alert('Error talking to background');
             } else {
                 if (response.storage !== 'none') {
                     p3username = response.p3username;

@@ -1,75 +1,19 @@
 /*  This file contains styles applied to the Helper content */
 /*  This file lives at: */
 
-body.popup {
-    min-width: 400px;
-    min-height: 400px;
+.popup {
     font-size: 1.5em;
     background-color: #eeeeee;
     color: #0000b0;
 }
 
-body.popup div.popup {
+div.popup {
+    min-width: 400px;
+    min-height: 400px;
+}
+
+h2.popup {
     font-size 2.0em;
-    background-color: #eeeeee;
-    color: #0000b0;
-}
-
-body.popup div.popup h2.popup {
-    font-size 2.0em;
-}
-
-div#container div#main table tbody tr td div#pp-insertion {
-font-size: 1.2em;
-border: 1px solid gray;
-margin-bottom: 2px;
-background-image: url(https://www.gsaadvantage.gov/images/adv13/images/gui/bgs/grad_fill_05.jpg);
-}
-
-div#container div#main table tbody tr td div#pp-insertion h2{
-font-size: 20pt;
-color: #cd2712;
-}
-
-div#container div#main table tbody tr td div#pp-insertion {
-font-size: 14pt;
-}
-
-.search-result {
-min-height: 100px;
-font-size: 12pt;
-}
-
-<table class="item-match-header search-results-header"' +
-                      'id="item-match-table">'
-
-table.item-match-table#item-match-table {
-    border: solid gray 3px;
-    background-color: #fafafa;
-    font: 16px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
-}
-
-thead.item-match-header {
-    border: solid gray 1px;
-    background-color: #fafafa;
-    font: 17px bold "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
-}
-
-tr.item-match-row {
-    font: 15px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
-    border: solid gray 1px;
-}
-
-div.advantage-popup {
-    position: absolute;
-    padding: 10px;
-    line-height: 120%;
-    width: 400px;
-    text-align: left;
-    height: auto;
-    background-color: #eeeeee;
-    font: 16px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
-    border: solid gray 3px;
 }
 
 p#click-to-dismiss {
@@ -94,63 +38,34 @@ font-size: 12px;
 background-color: #cccccc;
 }
 
-div.modal-dialog-canvas {
-position: fixed;
-background-color:rgba(196,196,196,0.7);
-z-index: 100;
-width: 100%;
-height: 100%;
+.pp {
+    font-size: 13px;
 }
 
-div.modal-dialog#get-user-creds {
-position: relative;
-background-color: #eeeeee;
-z-index: 101;
-width: auto;
-height: 300px;
-margin: auto;
-margin-top: 200px;
-border: solid black 3px;
+.pp table {
+    width: 100%
 }
 
-div.modal-dialog-hdr {
-width: auto;
-padding: 10px;
-margin: 0px;
-background-color: #0000ff;
-color: #ffffff;
+thead.item-match-header {
+    border-bottom: solid red 2px;
 }
 
-h2.modal-dialog#get-user-creds-hdr {
-font: lighter 16px/15px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
-}
-
-div.modal-dialog-body {
-width: auto;
-padding: 10px;
-margin: 0px;
-background-color: #eeeeee;
-color: #000000;
-}
-
-p.modal-dialog#get-user-creds-hdr {
-font: lighter 14px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
-}
-
-div.adv-helper {
-}
-
-div.adv-helper#item-results-container {
+.pp.container {
 border: 2px solid #ff0000;
+margin: 0px;
+padding: 0px;
+width: 100%;
 height:auto;
 }
 
-div.adv-helper#item-results-toggler {
+div.pp-red-head {
     background-color: #ff0000;
     height: auto;
+    margin: 0px;
+    border: 0px;
 }
 
-div.adv-helper#item-results-toggler p {
+.pp p {
     vertical-align: middle;
     font: 16px "Lucida Sans Unicode","Lucida Grande",sans-serif;
     text-align: center;
@@ -161,12 +76,17 @@ div.adv-helper#item-results-toggler p#toggler {
     text-decoration: underline;
 }
 
-div.adv-helper#item-results-expanded {
-    border: solid gray 2px;
-    background-color: #fafafa;
-    visibility: visible;
-    position: static;
+div.more-info {
+    border: solid black 2 px;
+    position: absolute;
+    right: 100px;
+    background-color: #e0e0e0;
 }
+
+div.more-info p {
+    font-size: 12px;
+}
+
 div.adv-helper#credentials {
     border: solid gray 2px;
     background-color: #fafafa;
@@ -174,8 +94,7 @@ div.adv-helper#credentials {
     position:static;
 }
 
-
-div.adv-helper#item-results-expanded p#search-results {
+div.ppp-results {
     border-top: 1px solid #202020;
     border-bottom: 1px solid #202020;
     border-left: none;

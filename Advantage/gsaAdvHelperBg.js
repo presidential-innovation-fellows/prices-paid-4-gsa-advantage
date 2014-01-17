@@ -32,7 +32,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     } else {
         credentials.Password = 'nopassword';
     }
-	sendResponse({ppp-credentials: credentials});
 	break;
 
 	case 'signs-of-life':
