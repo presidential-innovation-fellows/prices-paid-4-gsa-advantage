@@ -1,0 +1,37 @@
+{
+  "name" : "Prices Paid for GSA Advantage",
+  "short_name" : "pp4GSAAdvantage",
+  "version" : "0.2.1",
+  "description" : "Find and display relevant Prices Paid data in GSA Advantage",
+  "background" : { "page": "gsaAdvHelperBg.html" },
+  "icons" : {
+    "48": "icon48.png"          
+    },
+  "permissions" : [
+	      "tabs",
+	      "https://pricespaid.acquisition.gov/*",
+	      "https://www.gsaadvantage.gov/*" ],
+  "page_action": {
+    "default_icon": {                  
+        "19": "icon19.png",          
+        "38": "icon38.png"
+        },
+    "default_title": "get data from prices paid",
+    "default_popup": "popup.html"
+    },
+  "content_scripts": [
+	   {
+	   "matches": ["https://www.gsaadvantage.gov/*"],
+	   "css": ["gsaAdvHelper.css"],
+	   "js": [ "jquery-1.10.2.js", "gsaAdvHelper.js"]
+	   }
+  ],
+  "minimum_chrome_version" : "6.0.0.0",
+  "manifest_version": 2,
+  "web_accessible_resources": [
+      "https://pricespaid.acquisition.gov/*",
+      "gsaAdvItemTemplate.html",
+      "gsaAdvCredsTemplate.html",
+      "images/*"
+  ]
+}

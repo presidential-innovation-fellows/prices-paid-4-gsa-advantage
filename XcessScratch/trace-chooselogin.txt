@@ -1,0 +1,604 @@
+== Info: About to connect() to gsaxcess.gov port 443 (#0)
+== Info:   Trying 159.142.4.86...
+== Info: connected
+== Info: Connected to gsaxcess.gov (159.142.4.86) port 443 (#0)
+== Info: SSLv3, TLS handshake, Client hello (1):
+=> Send SSL data, 112 bytes (0x70)
+0000: ...l..S..! ...#.2..^.k.K........)..&......9.8.5.......3.2./.....
+0040: ....................................gsaxcess.gov
+== Info: SSLv3, TLS handshake, Server hello (2):
+<= Recv SSL data, 85 bytes (0x55)
+0000: ...Q...;6..B'...D.dY.....*..O........ .V^j..=....]CY......A.0C.
+0040: D....................
+== Info: SSLv3, TLS handshake, CERT (11):
+<= Recv SSL data, 4123 bytes (0x101b)
+0000: .........G0..C0..+.........<.8....y=..h.C0...*.H........0..1.0..
+0040: .U....US1.0...U....VeriSign, Inc.1.0...U....VeriSign Trust Netwo
+0080: rk1;09..U...2Terms of use at https://www.verisign.com/rpa (c)101
+00c0: /0-..U...&VeriSign Class 3 Secure Server CA - G30...131028000000
+0100: Z..141118235959Z0..1.0...U....US1.0...U....Virginia1.0...U....Ar
+0140: lington1(0&..U....General Services Administration1.0...U....GSAC
+0180: 1.0...U....gsaxcess.gov0.."0...*.H.............0.........}..m...
+01c0: l\..RL.n....r...t.U^Rm.3....^O..5`....o...G...O(.K.i.....;C=..`.
+0200: ......Q....b...X...%@f.....R+..9U{...6{.:g...[.q]...(..i...sj/.L
+0240: .@.$.,(.G./U..i.vw6e...+..X.C..._]s`.............R`#9...OQ3$...5
+0280: .....?.?.G^....Y..0C...^..W1F_.h..{...i.......!)N.w..K2E........
+02c0: |0..x0...U....0...gsaxcess.gov0...U....0.0...U...........0...U.%
+0300: ..0...+.........+.......0C..U. .<0:08..`.H...E..60*0(..+........
+0340: .https://www.verisign.com/cps0...U.#..0....D\.SD..~. .%..c..y.0E
+0380: ..U...>0<0:.8.6.4http://SVRSecure-G3-crl.verisign.com/SVRSecureG
+03c0: 3.crl0v..+........j0h0$..+.....0...http://ocsp.verisign.com0@..+
+0400: .....0..4http://SVRSecure-G3-aia.verisign.com/SVRSecureG3.cer0..
+0440: .*.H.............*.....}Y..S.w.x.[..Sa.m..] .H......y2.u..#.....
+0480: J.Xv.K...].t..B.;2.:.Su.!...:<....U..*X....e......+.H^B.=2...a.7
+04c0: q.4.i.ZF...}~2...'...9..\..IPM..].f[ST......%....yn.T.C&\...Z...
+0500: .......\o.....5g.0..\....8O!.>.'...........k...A.O.S.+.O#....N..
+0540: =.&..........X.e....0...0..........n.z... ......R..0...*.H......
+0580: ..0..1.0...U....US1.0...U....VeriSign, Inc.1.0...U....VeriSign T
+05c0: rust Network1:08..U...1(c) 2006 VeriSign, Inc. - For authorized 
+0600: use only1E0C..U...<VeriSign Class 3 Public Primary Certification
+0640:  Authority - G50...100208000000Z..200207235959Z0..1.0...U....US1
+0680: .0...U....VeriSign, Inc.1.0...U....VeriSign Trust Network1;09..U
+06c0: ...2Terms of use at https://www.verisign.com/rpa (c)101/0-..U...
+0700: &VeriSign Class 3 Secure Server CA - G30.."0...*.H.............0
+0740: ..............E...%....>....9.....V...e.DOM.o..J..N..h...{.....4
+0780: 4..[.I{b.H.t..xl.S..C&WX3.;3....N.$..}d..tJ4..........K;.c...-.
+07c0: ......=..7..H5.)Px.Ec..AO...{...q.P.(....S...,#.........<n....56
+0800: .Q.i...Vno.W........JTj.M......g..DU3.$.?SE...<.m...J...7....
+0840: ...{8N...........0...04..+........(0&0$..+.....0...http://ocsp.v
+0880: erisign.com0...U.......0.......0p..U. .i0g0e..`.H...E....0V0(..+
+08c0: .........https://www.verisign.com/cps0*..+.......0...https://www
+0900: .verisign.com/rpa04..U...-0+0).'.%.#http://crl.verisign.com/pca3
+0940: -g5.crl0...U...........0m..+........a0_.].[0Y0W0U..image/gif0!0.
+0980: 0...+..............k...j.H.,{..0%.#http://logo.verisign.com/vslo
+09c0: go.gif0(..U...!0...0.1.0...U....VeriSignMPKI-2-60...U.......D\.S
+0a00: D..~. .%..c..y.0...U.#..0....e......0..C9...3130...*.H.........
+0a40: ......$.....X..6....K......S........X.ul...L...-...n."pU. 3@3..e
+0a80: ...C7....lp....;.7.zm...}IJ....(...w$..&.m..@Ag.':..H.".......{.
+0ac0: ....v*..-.nt...."....+....\.P....b7..e..AS.....X(...[...J....&.
+0b00: .fx.J..B....B....g$.a......&...n..u.F....^.....G...(l%'....X..8.
+0b40: ...f...0...0..9.......%...0a..+...M|..0...*.H........0_1.0...U..
+0b80: ..US1.0...U....VeriSign, Inc.1705..U....Class 3 Public Primary C
+0bc0: ertification Authority0...061108000000Z..211107235959Z0..1.0...U
+0c00: ....US1.0...U....VeriSign, Inc.1.0...U....VeriSign Trust Network
+0c40: 1:08..U...1(c) 2006 VeriSign, Inc. - For authorized use only1E0C
+0c80: ..U...<VeriSign Class 3 Public Primary Certification Authority -
+0cc0:  G50.."0...*.H.............0.........$..)z5.`...K;N.|.<E..+..)..
+0d00: W..d..'....1.]".*..B....U...K...~.W..C.fb.a.`.......b.=T..I.YT.&
+0d40: .+........3I.CcjRK...pQM..i{.p....t.{]KV....w....%....g.........
+0d80: ...:......<....7........=..u.3...@.t$.!.....*R....I..cG.<i...G.+
+0dc0: ~O.......C.gs...~.?.s.3..]?4....S.%..........0...0...U.......0..
+0e00: ..01..U...*0(0&.$.". http://crl.verisign.com/pca3.crl0...U......
+0e40: .....0=..U. .60402..U. .0*0(..+.........https://www.verisign.com
+0e80: /cps0...U.......e......0..C9...3130m..+........a0_.].[0Y0W0U..i
+0ec0: mage/gif0!0.0...+..............k...j.H.,{..0%.#http://logo.veris
+0f00: ign.com/vslogo.gif04..+........(0&0$..+.....0...http://ocsp.veri
+0f40: sign.com0>..U.%.705..+.........+.........+.........`.H...B....`.
+0f80: H...E...0...*.H....................Z.. .Y.b....N..Y....8.N.f....
+0fc0: ....m>J. .<..eT..D...,k>......c..^..*g..3.*..V.#....:.Y..E5..[.f
+1000: .P..mW..x....W...K.....~...
+== Info: SSLv3, TLS handshake, Server finished (14):
+<= Recv SSL data, 4 bytes (0x4)
+0000: ....
+== Info: SSLv3, TLS handshake, Client key exchange (16):
+=> Send SSL data, 262 bytes (0x106)
+0000: .......*.X........ga.x...>Dc.....41..A..+.s=.j...]>......./%....
+0040: .S......v...v\..c......X.7m.o..D.@o....w%..B .h..Z.'.N*.(6....m.
+0080: ...n.5.jU...a.......F.p.ad*....G|X.......+eCQ.$iz.E....LL/......
+00c0: ...]g./L?.....f....Cj./o.j...c.L)..</f...6..9.Q.G..Ag........ .j
+0100: d9....
+== Info: SSLv3, TLS change cipher, Client hello (1):
+=> Send SSL data, 1 bytes (0x1)
+0000: .
+== Info: SSLv3, TLS handshake, Finished (20):
+=> Send SSL data, 16 bytes (0x10)
+0000: .....&...Un.~...
+== Info: SSLv3, TLS change cipher, Client hello (1):
+<= Recv SSL data, 1 bytes (0x1)
+0000: .
+== Info: SSLv3, TLS handshake, Finished (20):
+<= Recv SSL data, 16 bytes (0x10)
+0000: ......U.+.......
+== Info: SSL connection using RC4-SHA
+== Info: Server certificate:
+== Info: 	 subject: C=US; ST=Virginia; L=Arlington; O=General Services Administration; OU=GSAC; CN=gsaxcess.gov
+== Info: 	 start date: 2013-10-28 00:00:00 GMT
+== Info: 	 expire date: 2014-11-18 23:59:59 GMT
+== Info: 	 subjectAltName: gsaxcess.gov matched
+== Info: 	 issuer: C=US; O=VeriSign, Inc.; OU=VeriSign Trust Network; OU=Terms of use at https://www.verisign.com/rpa (c)10; CN=VeriSign Class 3 Secure Server CA - G3
+== Info: 	 SSL certificate verify ok.
+=> Send header, 229 bytes (0xe5)
+0000: POST /fedsweb/fedsweb/ HTTP/1.1
+0021: User-Agent: curl/7.24.0 (x86_64-apple-darwin12.0) libcurl/7.24.0
+0061:  OpenSSL/0.9.8y zlib/1.2.5
+007d: Host: gsaxcess.gov
+0091: Accept: */*
+009e: Content-Length: 22
+00b2: Content-Type: application/x-www-form-urlencoded
+00e3: 
+=> Send data, 22 bytes (0x16)
+0000: Continue=Continue&ICN=
+== Info: upload completely sent off: 22 out of 22 bytes
+<= Recv header, 31 bytes (0x1f)
+0000: HTTP/1.1 200 Document follows
+<= Recv header, 19 bytes (0x13)
+0000: Mime-Version: 1.0
+<= Recv header, 37 bytes (0x25)
+0000: Date: Sun, 02 Mar 2014 20:18:45 GMT
+<= Recv header, 23 bytes (0x17)
+0000: Content-Length: 15471
+<= Recv header, 25 bytes (0x19)
+0000: Content-Type: text/html
+<= Recv header, 20 bytes (0x14)
+0000: Server: Web Server
+<= Recv header, 29 bytes (0x1d)
+0000: X-Frame-Options: SAMEORIGIN
+<= Recv header, 23 bytes (0x17)
+0000: Vary: Accept-Encoding
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 1456 bytes (0x5b0)
+0000: <!-- This page works on both places GSAB as well as GSAC. There 
+0040: is no seperate page for GSAC-->
+0061: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+00a2: <html lang="en">
+00b4: <head>
+00bc: <meta http-equiv="Content-Type" content="text/html; charset=utf-
+00fc: 8" />
+0103: <meta name="keywords" content="GSAXcess?, GSAXcess, GSAXcess&#17
+0143: 4;, GSAXcess, GSAExcess, excess, surplus, personal, property, fe
+0183: deral, disposal, system, FEDS, donation, Transfer, EADS, AAMS, X
+01c3: cess, xcess,">
+01d3: <meta name="description" content="GSAXcess&#174; maintains recor
+0213: ds of all Excess and Surplus Personal Property Reported to Gener
+0253: al Services Administration (GSA).">
+0278: <meta name="provider" content="FSS Federal Supply Service">
+02b5: <meta http-equiv="Expires" CONTENT="0">
+02de: <meta http-equiv="Cache-Control" CONTENT="no-cache">
+0314: <meta http-equiv="Pragma" CONTENT="no-cache">
+0343: <script>
+034d: var lnB1,lnC1="";
+0360: lnB1='<TITLE>GSAXcess&#174; Home - Login to GSAXcess&#174; Pract
+03a0: ice (FEDSWLOG)</TITLE>';
+03ba: lnC1='<TITLE>GSAXcess&#174; Home - Login to GSAXcess&#174; (FEDS
+03fa: WLOG)</TITLE>';
+040b: if (window.location.host=="gsaxcess.gov")
+0436: document.write(lnC1);
+044d: else
+0453: document.write(lnB1);
+046a: 
+046c: function newWinLog(loc,winName)
+048d: {newWindow = window.open(loc,"DRMSRTD2","");
+04bb: }
+04be: </script>
+04c9: <script type="text/javascript" language=javascript>
+04fe: var winFeatures;
+0510: var winBrowser=navigator.appName;
+0533: var isNN = (navigator.appName.indexOf("Netscape")!=-1);
+056c: 
+056e: var NSX = navigator.appName == "Netscape";
+059a: var IEX = navigator.ap
+<= Recv data, 1456 bytes (0x5b0)
+0000: pName == "Microsoft Internet Explorer";
+0029: var BV = parseInt(navigator.appVersion);
+0053: 
+0055: function hlpOpen(trnNumb)
+0070: {
+0073: var htmlName1="/help/htm/help";
+0094: var htmlName2=trnNumb.toString();
+00b7: var htmlName3="F.htm";
+00cf: var htmlName=htmlName1+htmlName2+htmlName3;
+00fc: winFeatures='toolbar=yes,titlebar=yes,locationbar=no,status=yes,
+013c: scrollbars=yes,resizable=yes';
+015c: window.open(htmlName,'Help',winFeatures);
+0187: }
+018a:  
+018d: function newsOpen(trnNo)
+01a7: {
+01aa: newWindow = window.open("/htm/newsfedsf.htm","News","");
+01e4: }
+01e7: // to uppercase
+01f8: function uC(fld)
+020a: {
+020d: fld.value=fld.value.toUpperCase();
+0231: }
+0234: var imgSpace='<img src="/pgmimg/hp_spacer.gif" width="4" alt="">
+0274: ';
+0278: function trim(fld)
+028c: {fld.value=fld.value.replace(/^\s+/, "");
+02b7: }
+02ba: // warning after 25 mins
+02d4: var timer = null
+02e6: //begin Session Timeout Scripts
+0307: var timeOutWin=null;
+031d: function timeOut()
+0331: {winFeatures='toolbar=yes,titlebar=yes,locationbar=no,status=yes
+0371: ,scrollbars=yes,resizable=yes,alwaysRaised=yes';
+03a3: timeOutWin=window.open('/htm/xcesstimeout.htm','Timeout','width=
+03e3: 550,height=200,top=160,left=200',"winFeatures");
+0415: if (timeOutWin)
+0426: {window.focus();
+0438: timeOutWin.focus();
+044d: }
+0450: else
+0456: window.focus();
+0467: }
+046a: var timer=null;
+047b: var timerRetHome=null;
+0493: timer = setTimeout("timeOut()",3240000);
+04bd: function saveData()
+04d2: {if (timeOutWin)
+04e4: timeOutWin.close();
+04f9: document.forms[0].SELLNK.value="RH";
+051f: document.forms[0].submit();
+053c: }
+053f: timerRetHome = setTimeout("saveData()",3540000);
+0571: // 1000 milliseconds = 1 sec (e.g. for 3 mins, 3*60*1000 = 180,
+<= Recv data, 1456 bytes (0x5b0)
+0000: 000)
+0006: </script>
+0011: <script type="text/javascript" language=javascript src="/js/xces
+0051: spages.js"></script>
+0067: <script type="text/javascript" language=javascript src="/js/feds
+00a7: wlog.js"></script>
+00bb: <script type="text/javascript" language="JavaScript" src="/js/pu
+00fb: bheader.js"></script>
+0112: <link rel="STYLESHEET" type="text/css" href="/js/feds.css">
+014f: <style type="text/css">
+0168: .D1 {font-family:helv;font-weight:Bold;text-align:right;color:bl
+01a8: ack;font-size:9pt;}
+01bd: .D2 {font-family:helv;text-align:left;color:black;font-size:9pt;
+01fd: }
+0200: .D3 {font-family:helv;font-weight:Bold;text-align:left;color:bla
+0240: ck;font-size:9pt;}
+0254: .D4 {font-family:helv;font-weight:Bold;text-align:left;color:red
+0294: ;font-size:11pt;}
+02a7: #J {font-family:helv;text-align:left;color:black;font-size:9pt; 
+02e7: padding: 5px 5px;}
+02fb: .tit{background-color:e2eef9;font-family:helv;font-weight:Bold;t
+033b: ext-align:left;color:black;font-size:12pt;}
+0368: .right{border:1px solid #e6e2d6;display:block;background-color:#
+03a8: f0f0f0;text-decoration:none;}
+03c7: .titRight{color:#cc0000;font-size:12pt;font-weight:bold;backgrou
+0407: nd-color:#e6e2d6;border:1px solid #e6e2d6;}
+0434: .left{display:block;text-decoration:none;text-align:center;}
+0472: .titLeft{color:#cc0000;font-size:12pt;font-weight:bold;backgroun
+04b2: d-color:white;}
+04c3: .bdrbtm{border-bottom:1px solid #ffffff;}
+04ee: .lgTit {color:#9a0000; text-align:center; font-family:arial,helv
+052e: etica,verdana; font-size:15px; font-weight:bold;}
+0561: </style>
+056b: <style>
+0574: /* =Left-Nav styles
+0589: ---------------------------*/
+05a8: #navcont
+<= Recv data, 1456 bytes (0x5b0)
+0000: ainer {
+0009: .border-top: 1px solid #fff;
+0027: .font-size: 11pt;
+003a: .font-weight: bold;
+004f: }
+0052: #navcontainer #GSACatName {
+006f: .background: #c00 url(/pgmimg/HomePage/nav_notchedCnr.gif) no-re
+00af: peat top left;
+00bf: .border-bottom: 1px solid #fff;
+00e0: .color: #fff;
+00ef: .font-size: 100%;
+0102: .min-height: 10px;
+0116: .padding: 5px 5px 5px 20px;
+0133: }
+0136: /* setting the height for IE */
+0157: #html #navcontainer #GSACatName {
+017a: .height: 10px;
+018a: }
+018d: h5 {
+0193: .background: #aa998a url(/pgmimg/HomePage/block4_hdr.gif) no-rep
+01d3: eat top left;
+01e2: .border-bottom: 1px solid #fff;
+0203: .color: #fff;
+0212: .font-size: 100%;
+0225: .min-height: 9px;
+0238: .margin: 0;
+0245: .padding: 5px 5px 5px 20px;
+0262: }
+0265: </style>
+026f: </HEAD>
+0278: <body topmargin="0" leftmargin="0" marginheight="0" marginwidth=
+02b8: "0" onLoad="setFocus(1);errWarn();">
+02de: <script type="text/javascript" language="JavaScript">
+0315: var host = window.location.host;
+0337: var temphttp="https://"; 
+0352: var appDir="/fedsweb";
+036a: var server=host+appDir;
+0383: var temptcode="/fedswlog/";
+03a0: var frmAction = temphttp+server+temptcode;
+03cc: document.write ('<form action="'+frmAction+'" method=post name=f
+040c: edswlog autocomplete="off">');
+042c: </script>
+0437: <input type=hidden name=scParam VALUE="2014030214184551">
+0472: <input type=hidden name=SELLNK value="">
+049c: <script type="text/javascript" language="JavaScript">
+04d3: hdrFlag();
+04df: hdrBar1();
+04eb: var scWarn=["",];
+04fe: var scResp=["Enter User ID and Password then click 'Login' butto
+053e: n"];
+0544: </script>
+054f: <table bgcolor="#ffffff" border="0" bordercolor="#ffffff" cellpa
+058f: dding="0" cellspacing="0" marginh
+<= Recv data, 1456 bytes (0x5b0)
+0000: eight="0" marginwidth="0" width=100% summary="This table contain
+0040: s Helpdesk Links">
+0054: <tr align="center">&nbsp;</td></tr>
+0079: </table>.
+0084: <table bgcolor="#9f0c0c" border="1" bordercolor="#ffffff" cellpa
+00c4: dding="0" cellspacing="0"
+00df: marginheight="0" marginwidth="0" width=100% summary="This table 
+011f: contains blank items">
+0137: <tr>
+013d: <td width="60%" id="HC1" nowrap>
+015f: <img src="/pgmimg/hp_spacer.gif" alt="">
+0189: <script type="text/javascript">
+01aa: var homeLn="";
+01ba: homeLn='<td nowrap><a href=' 
+01d9: + pubHost
+01e4: +' title="GSAXcess&#174; Home" id=BTNBAR>&nbsp;Home&nbsp;</a>'
+0224: +'<img src="/pgmimg/hp_spacer.gif" alt=""></td>';
+0257: document.write(homeLn);
+0270: </script>
+027b: </tr>
+0282: </table>
+028c: 
+028e: <table align=center cellpadding="0" width="99%" summary="This ta
+02ce: ble contains Welcome to GSAXcess page">
+02f7: <tr><td colspan=2 id=HE align=center><h4>Welcome to GSAXcess&#17
+0337: 4;</h4></td></tr>
+034a: <tr><td colspan=2 id=MSG>Enter User ID and Password then click '
+038a: Login' button</td></tr>
+03a3: <tr>
+03a9: <td width=70% valign="top">
+03c6: <table width=100% summary="This table contains Login information
+0406: ">
+040a: <tr>
+0410: <td>&nbsp;</td>
+0421: <td class="lgTit">
+0435: <script type="text/javascript">
+0456: var scSendNASA="";
+046a: var lnB1,lnC1="";
+047d: lnC1='GSAXcess&#174; Login';
+049b: lnB1='GSAXcess&#174; Practice Login';
+04c2: lnNASAC1='NASA SSP Artifacts Prescreening Login';
+04f5: lnNASAB1='NASA SSP Artifacts Prescreening Practice Login';
+0531: if (window.location.host=="gsaxcess.gov")
+055c: {if (scSendNASA=="Y")
+0573: document.write(lnNASAC1);
+058e: else
+0594: document.write(lnC1);
+05ab: }
+05ae: el
+<= Recv data, 2912 bytes (0xb60)
+0000: se
+0004: {if (scSendNASA=="Y")
+001b: document.write(lnNASAB1);
+0036: else
+003c: document.write(lnB1);
+0053: }
+0056: </script>
+0061: </td>
+0068: </tr>
+006f: <tr>
+0075: <td width=20%>&nbsp;</td>
+0090: <td width=45%>
+00a0: <table align=middle summary="This table contains Login informati
+00e0: on">
+00e6: <tr><td colspan=2>&nbsp;</td></tr>
+010a: <tr>
+0110: <td class=D1><label for="scLidId">&nbsp;User ID&nbsp;</td>
+014c: <td class=D2><INPUT onBlur="uC(this)" title="Enter A 6 digit Use
+018c: r ID/User Code assigned by GSAXcess&#174;" autocomplete="off" ma
+01cc: xLength=6 size=6 name=scLid VALUE="" ID="scLidId"></td>
+0205: </tr>
+020c: <tr>
+0212: <td class=D1><label for="scPasswordId">&nbsp;Password &nbsp;</la
+0252: bel></td>
+025d: <td class=D2><INPUT onBlur="uC(this)" title="Enter the Password 
+029d: for your User ID" autocomplete="off" type=password maxlength=10 
+02dd: size=10 name=scPassword VALUE="" ID="scPasswordId">&nbsp;&nbsp;<
+031d: input type="image" name="Login" src="/pgmimg/hp_login.jpg" alt="
+035d: Login" title="Click here to login to GSAXcess&#174; System" widt
+039d: h="47" height="18" border="0" onClick="return chkSignOn()" onKey
+03dd: Press="return chkSignOn()">
+03fa: </td>
+0401: </tr>
+0408: <script type="text/javascript">
+0429: var secQtn=["&nbsp",];
+0441: if (secQtn[0] >" ")
+0456: {document.write('<tr><td class=D1><label for="scSecAnswerId">&nb
+0496: sp;&nbsp&nbsp;</label></td>'
+04b4: + '<td class=D2><input onblur="uC(this)" onkeyup="return autoTab
+04f4: (this,20, event)"'
+0508: + ' title="Enter the Answer for your clue question" type="hidden
+0548: " maxlength=20 size=20 name=scSecAnswer ID="scSecAnswerId" autoc
+0588: omplete="off" VALUE=""></label></td></tr>');
+05b6: }
+05b9: </script>
+05c4: <tr>
+05ca: <td colspan=2 class=D2>
+05e3: <div><img src="/pgmimg/hp_spacer.gif" alt="" height="10"></div>
+0624: <strong>Change Password?</strong> Enter User ID, Password and <A
+0664:  href="javascript:selLnk('CP')" onClick="return chkSignOn()" onK
+06a4: eyPress="return chkSignOn()" onMouseOver="f1(this)" onMouseOut="
+06e4: f3(this)" onFocus="f1(this)" onBlur="f3(this)" title="Enter User
+0724:  ID, Password and click here to Change your Password" class="bod
+0764: y"><strong> Click here to Change Password</strong></A>.</td>
+07a2: </tr>
+07a9: <tr>
+07af: <td colspan=2 class=D2>
+07c8: <div><img src="/pgmimg/hp_spacer.gif" alt="" height="10"></div>
+0809: <strong>Forgot Password?</strong> Enter User ID and <A href="jav
+0849: ascript:selLnk('FP')" onClick="return forgotPwd()" onKeyPress="r
+0889: eturn forgotPwd()" onMouseOver="f1(this)" onMouseOut="f3(this)" 
+08c9: onFocus="f1(this)" onBlur="f3(this)" title="Enter User ID and cl
+0909: ick here to Retrieve your Password" class="body"><strong>Click h
+0949: ere to Retrieve Password</strong></A>.</td>
+0976: </tr>
+097d: <tr>
+0983: <td colspan=2 class=D2>
+099c: <div><img src="/pgmimg/hp_spacer.gif" alt="" height="10"></div>
+09dd: <strong>Update User Contact Information?</strong> Enter User ID,
+0a1d:  Password and <A href="javascript:selLnk('UU')" onClick="return 
+0a5d: chkSignOn()" onKeyPress="return chkSignOn()" onMouseOver="f1(thi
+0a9d: s)" onMouseOut="f3(this)" onFocus="f1(this)" onBlur="f3(this)" t
+0add: itle="Enter User ID, Password and click here to Update User Cont
+0b1d: act Information" class="body"><strong> Click here to Update your
+0b5d:  Co
+<= Recv data, 1456 bytes (0x5b0)
+0000: ntact Information</strong></A>.</td>
+0026: </tr>
+002d: <script>
+0037: if (scSendNASA=="Y")
+004d: document.write('<tr>'
+0064: +'<td colspan=2 class=D4>'
+0080: +'<div><img src="/pgmimg/hp_spacer.gif" alt="" height="10"></div
+00c0: >'
+00c4: +'<strong>Note:</strong> This module contains Pop-Ups. Before Lo
+0104: gin, go to Tools in your browser and under Internet Options Dele
+0144: te Files.   After Login, disable the Pop-Up Blocker.  Go to Tool
+0184: s and under Pop-Up Blocker click Turn Off Pop-up Blocker.</p></t
+01c4: d>'
+01c9: +'</tr>'
+01d3: +'<tr>'
+01dc: +'<td colspan=2 class=D2>'
+01f8: +'<div><img src="/pgmimg/hp_spacer.gif" alt="" height="10"></div
+0238: >'
+023c: +'<strong>To eliminate download problems experienced with the fo
+027c: llowing common browsers: '
+0298: +'<ul>'
+02a1: +'<li>Internet Explorer - Version 6.0 or later </li>'
+02d8: +'<li>Netscape Navigator</li>'
+02f8: +'</ul>'
+0302: +'You can use the preferred NEW Mozilla Firefox to eliminate pro
+0342: blems when accessing NASA Prescreening module: </strong><br>'
+0381: +'<A href="http://www.mozilla.com/en-US/firefox/ie.html" onMouse
+03c1: Over="f1(this)" onMouseOut="f3(this)" onFocus="f1(this)" onblur=
+0401: "f3(this)" title="Click here to download New Mozilla Firefox bro
+0441: wser" class="body"><strong>Click here to Free Download Firefox B
+0481: rowser</strong></A>.'
+0498: +'</td>'
+04a2: +'</tr>');
+04ae: </script>
+04b9: 
+04bb: 
+04bd: </table>
+04c7: </td>
+04ce: </tr>
+04d5: </table>
+04df: </td>
+04e6: <td class="right" valign=top>
+0505: <div><h5>GSAXcess&#174; HelpDesk</h5></div>
+0532: <div><img src="/pgmimg/hp_spacer.gif" alt="" height="5"></div>
+0572: <div id=J><strong>GSAXcess&#174; HelpDesk</strong> <br>1-866-3
+<= Recv data, 1456 bytes (0x5b0)
+0000: 33-7472<br>
+000d: <a href="mailto:GSAXcesshelp@gsa.gov" onMouseOver="f1(this)" onM
+004d: ouseOut="f3(this)" onFocus="f1(this)" onBlur="f3(this)" title="G
+008d: SAXcesshelp@gsa.gov" class="body"><strong>GSAXcessHelp@gsa.gov</
+00cd: strong></a>
+00da: </div>
+00e2: <div><img src="/pgmimg/hp_spacer.gif" alt="" height="5"></div>
+0122: <script type="text/javascript">
+0143: var regLine="";
+0154: if (scSendNASA=="Y")
+016a: regLine='<div><h5>NASA Artifact and Tile Registration</h5></div>
+01aa: '
+01ad: +'<div><img src="/pgmimg/hp_spacer.gif" alt="" height="5"></div>
+01ed: '
+01f0: +'<div id=J>'
+01ff: +'<a href="'
+020d: +'/fedsweb/fedsweb/?Continue=NASARegister&ICN=""&NASA=NASA'
+024a: +'" onMouseOver="f1(this)" onMouseOut="f3(this)" onFocus="f1(thi
+028a: s)" onblur="f3(this)" title="Click here to Register" class="body
+02ca: "><strong>Register</strong></a>'
+02ec: +' to receive a User ID and password to request artifacts and ti
+032c: les. You will need the Department of Education' + "'" + 's stati
+036c: stics tracking number '
+0385: +'(an <a href="http://nces.ed.gov/" onMouseOver="f1(this)" onMou
+03c5: seOut="f3(this)" onFocus="f1(this)" onblur="f3(this)" title="Nat
+0405: ional Center for Education and Statistics" class="body"><strong>
+0445: NCES</strong></a> Number if you are a school or an <a href="http
+0485: ://nces.ed.gov/IPEDS/" onMouseOver="f1(this)" onMouseOut="f3(thi
+04c5: s)" onFocus="f1(this)" onblur="f3(this)" title="Integrated Posts
+0505: econdary Education Data System" class="body"><strong>IPEDS</stro
+0545: ng></a> '
+0550: +'Number if you are a University). <strong>NOTES:</strong> If yo
+0590: u are acquiring NASA program art
+<= Recv data, 1456 bytes (0x5b0)
+0000: ifacts [other than tiles] by registering with an NCES or IPEDS n
+0040: umber, DO NOT request the same artifact through the State Agency
+0080:  for Surplus Property [SASP]. Only schools and universities can 
+00c0: request a tile, and you must register to request a tile. Tiles c
+0100: annot be requested through the SASP.';
+0128: else
+012e: regLine='<div><h5>GSAXcess&#174; Register</h5></div>'
+0165: +'<div><img src="/pgmimg/hp_spacer.gif" alt="" height="5"></div>
+01a5: '
+01a8: +'<div id=J>If you do not have an User ID but have a <strong>.go
+01e8: v</strong> or <strong>.mil</strong> email address, <A href="#" o
+0228: nClick="setAct();selLnk(' + "'RR'" + ')" onKeyPress="setAct();se
+0268: lLnk('+ "'RR'" + ')" onMouseOver="f1(this)" onMouseOut="f3(this)
+02a8: " onFocus="f1(this)" onblur="f3(this)" title="Click here to Regi
+02e8: ster" class="body"><strong>Register</strong></A> here. The syste
+0328: m will assign you a <strong>generic User ID</strong> that can be
+0368:  used to search our data base.</div>';
+0390: 
+0392: document.write(regLine);
+03ac: </script>
+03b7: <div><img src="/pgmimg/hp_spacer.gif" alt="" height="5"></div>
+03f7: <script type="text/javascript">
+0418: var ln1="";
+0425: var lnB1,lnB2="";
+0438: var lnC1,lnC2="";
+044b: lnB1='<div><h5>GSAXcess&#174; Practice Home</h5></div>';
+0485: ln1='<div><img src="/pgmimg/hp_spacer.gif" alt="" height="5"></d
+04c5: iv>';
+04cc: lnB2='<div id=J><strong>Click here to go to </strong><A href="ht
+050c: tp://gsaxcesspractice.fas.gsa.gov" onMouseOver="f1(this)" onMous
+054c: eOut="f3(this)" onFocus="f1(this)" onblur="f3(this)" title="Clic
+058c: k here to go to GSAXcess&#174; Pract
+<= Recv data, 911 bytes (0x38f)
+0000: ice Home" class="body" onClick="setAct()" onKeyPress="setAct()">
+0040: <strong>GSAXcess&#174; Practice Home</strong></A>.</div>';
+007c: 
+007e: lnC1='<div><h5>GSAXcess&#174; Home</h5></div>';
+00af: lnC2='<div ID=J><strong>Click here to go to </strong><A href="ht
+00ef: tp://gsaxcess.gov" onMouseOver="f1(this)" onMouseOut="f3(this)" 
+012f: onFocus="f1(this)" onblur="f3(this)" title="Click here to go to 
+016f: GSAXcess&#174; Home" class="body" onClick="setAct()" onKeyPress=
+01af: "setAct()"><strong>GSAXcess&#174; Home</strong></A>.</div>';
+01ed: if (host=="gsaxcess.gov")
+0208: document.write(lnB1+ln1+lnB2);
+0228: else
+022e: document.write(lnC1+ln1+lnC2);
+024e: </script>
+0259: 
+025b: <p>
+0260: </td>
+0267: <p>
+026c: </tr>
+0273: </table>
+027d: <hr>
+0283: <script type="text/javascript" language="JavaScript">
+02ba: ftrLn();
+02c4: </script>
+02cf: <input type="hidden" name="scTXTypViol" VALUE="">
+0302: <input type="hidden" name="WEBPCMTRANSID" VALUE="0112324,3091529
+0342: ">
+0346: <input name="scAction" type="hidden" value="">
+0376: </form>
+037f: </body>
+0388: </HTML>
+== Info: Connection #0 to host gsaxcess.gov left intact
+== Info: Closing connection #0
+== Info: SSLv3, TLS alert, Client hello (1):
+=> Send SSL data, 2 bytes (0x2)
+0000: ..

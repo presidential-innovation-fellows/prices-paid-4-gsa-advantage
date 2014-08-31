@@ -1,0 +1,694 @@
+== Info: About to connect() to gsaxcess.gov port 443 (#0)
+== Info:   Trying 159.142.4.86...
+== Info: connected
+== Info: Connected to gsaxcess.gov (159.142.4.86) port 443 (#0)
+== Info: SSLv3, TLS handshake, Client hello (1):
+=> Send SSL data, 112 bytes (0x70)
+0000: ...l..R..QD..|.`..e....]...^\.k..OWg.$....9.8.5.......3.2./.....
+0040: ....................................gsaxcess.gov
+== Info: SSLv3, TLS handshake, Server hello (2):
+<= Recv SSL data, 85 bytes (0x55)
+0000: ...Q..x....y..a?....g..?....|..Z.Q.... .V^j.......]CY...+&......
+0040: D...l................
+== Info: SSLv3, TLS handshake, CERT (11):
+<= Recv SSL data, 4123 bytes (0x101b)
+0000: .........G0..C0..+.........<.8....y=..h.C0...*.H........0..1.0..
+0040: .U....US1.0...U....VeriSign, Inc.1.0...U....VeriSign Trust Netwo
+0080: rk1;09..U...2Terms of use at https://www.verisign.com/rpa (c)101
+00c0: /0-..U...&VeriSign Class 3 Secure Server CA - G30...131028000000
+0100: Z..141118235959Z0..1.0...U....US1.0...U....Virginia1.0...U....Ar
+0140: lington1(0&..U....General Services Administration1.0...U....GSAC
+0180: 1.0...U....gsaxcess.gov0.."0...*.H.............0.........}..m...
+01c0: l\..RL.n....r...t.U^Rm.3....^O..5`....o...G...O(.K.i.....;C=..`.
+0200: ......Q....b...X...%@f.....R+..9U{...6{.:g...[.q]...(..i...sj/.L
+0240: .@.$.,(.G./U..i.vw6e...+..X.C..._]s`.............R`#9...OQ3$...5
+0280: .....?.?.G^....Y..0C...^..W1F_.h..{...i.......!)N.w..K2E........
+02c0: |0..x0...U....0...gsaxcess.gov0...U....0.0...U...........0...U.%
+0300: ..0...+.........+.......0C..U. .<0:08..`.H...E..60*0(..+........
+0340: .https://www.verisign.com/cps0...U.#..0....D\.SD..~. .%..c..y.0E
+0380: ..U...>0<0:.8.6.4http://SVRSecure-G3-crl.verisign.com/SVRSecureG
+03c0: 3.crl0v..+........j0h0$..+.....0...http://ocsp.verisign.com0@..+
+0400: .....0..4http://SVRSecure-G3-aia.verisign.com/SVRSecureG3.cer0..
+0440: .*.H.............*.....}Y..S.w.x.[..Sa.m..] .H......y2.u..#.....
+0480: J.Xv.K...].t..B.;2.:.Su.!...:<....U..*X....e......+.H^B.=2...a.7
+04c0: q.4.i.ZF...}~2...'...9..\..IPM..].f[ST......%....yn.T.C&\...Z...
+0500: .......\o.....5g.0..\....8O!.>.'...........k...A.O.S.+.O#....N..
+0540: =.&..........X.e....0...0..........n.z... ......R..0...*.H......
+0580: ..0..1.0...U....US1.0...U....VeriSign, Inc.1.0...U....VeriSign T
+05c0: rust Network1:08..U...1(c) 2006 VeriSign, Inc. - For authorized 
+0600: use only1E0C..U...<VeriSign Class 3 Public Primary Certification
+0640:  Authority - G50...100208000000Z..200207235959Z0..1.0...U....US1
+0680: .0...U....VeriSign, Inc.1.0...U....VeriSign Trust Network1;09..U
+06c0: ...2Terms of use at https://www.verisign.com/rpa (c)101/0-..U...
+0700: &VeriSign Class 3 Secure Server CA - G30.."0...*.H.............0
+0740: ..............E...%....>....9.....V...e.DOM.o..J..N..h...{.....4
+0780: 4..[.I{b.H.t..xl.S..C&WX3.;3....N.$..}d..tJ4..........K;.c...-.
+07c0: ......=..7..H5.)Px.Ec..AO...{...q.P.(....S...,#.........<n....56
+0800: .Q.i...Vno.W........JTj.M......g..DU3.$.?SE...<.m...J...7....
+0840: ...{8N...........0...04..+........(0&0$..+.....0...http://ocsp.v
+0880: erisign.com0...U.......0.......0p..U. .i0g0e..`.H...E....0V0(..+
+08c0: .........https://www.verisign.com/cps0*..+.......0...https://www
+0900: .verisign.com/rpa04..U...-0+0).'.%.#http://crl.verisign.com/pca3
+0940: -g5.crl0...U...........0m..+........a0_.].[0Y0W0U..image/gif0!0.
+0980: 0...+..............k...j.H.,{..0%.#http://logo.verisign.com/vslo
+09c0: go.gif0(..U...!0...0.1.0...U....VeriSignMPKI-2-60...U.......D\.S
+0a00: D..~. .%..c..y.0...U.#..0....e......0..C9...3130...*.H.........
+0a40: ......$.....X..6....K......S........X.ul...L...-...n."pU. 3@3..e
+0a80: ...C7....lp....;.7.zm...}IJ....(...w$..&.m..@Ag.':..H.".......{.
+0ac0: ....v*..-.nt...."....+....\.P....b7..e..AS.....X(...[...J....&.
+0b00: .fx.J..B....B....g$.a......&...n..u.F....^.....G...(l%'....X..8.
+0b40: ...f...0...0..9.......%...0a..+...M|..0...*.H........0_1.0...U..
+0b80: ..US1.0...U....VeriSign, Inc.1705..U....Class 3 Public Primary C
+0bc0: ertification Authority0...061108000000Z..211107235959Z0..1.0...U
+0c00: ....US1.0...U....VeriSign, Inc.1.0...U....VeriSign Trust Network
+0c40: 1:08..U...1(c) 2006 VeriSign, Inc. - For authorized use only1E0C
+0c80: ..U...<VeriSign Class 3 Public Primary Certification Authority -
+0cc0:  G50.."0...*.H.............0.........$..)z5.`...K;N.|.<E..+..)..
+0d00: W..d..'....1.]".*..B....U...K...~.W..C.fb.a.`.......b.=T..I.YT.&
+0d40: .+........3I.CcjRK...pQM..i{.p....t.{]KV....w....%....g.........
+0d80: ...:......<....7........=..u.3...@.t$.!.....*R....I..cG.<i...G.+
+0dc0: ~O.......C.gs...~.?.s.3..]?4....S.%..........0...0...U.......0..
+0e00: ..01..U...*0(0&.$.". http://crl.verisign.com/pca3.crl0...U......
+0e40: .....0=..U. .60402..U. .0*0(..+.........https://www.verisign.com
+0e80: /cps0...U.......e......0..C9...3130m..+........a0_.].[0Y0W0U..i
+0ec0: mage/gif0!0.0...+..............k...j.H.,{..0%.#http://logo.veris
+0f00: ign.com/vslogo.gif04..+........(0&0$..+.....0...http://ocsp.veri
+0f40: sign.com0>..U.%.705..+.........+.........+.........`.H...B....`.
+0f80: H...E...0...*.H....................Z.. .Y.b....N..Y....8.N.f....
+0fc0: ....m>J. .<..eT..D...,k>......c..^..*g..3.*..V.#....:.Y..E5..[.f
+1000: .P..mW..x....W...K.....~...
+== Info: SSLv3, TLS handshake, Server finished (14):
+<= Recv SSL data, 4 bytes (0x4)
+0000: ....
+== Info: SSLv3, TLS handshake, Client key exchange (16):
+=> Send SSL data, 262 bytes (0x106)
+0000: ......7r3"o.fc...f...5"....n....o.J....5....a. ..Fxc.).S.......z
+0040: ...\f......T..}...../G)..K%..l......z].7...8. N..UY..%x<.^.....
+0080: .W......{....3.....-_...,a9.....zS.=`..t/.6..i......d..>..q...2K
+00c0: A.....!.5.C..V..\..I....H.S......[....QjPr....?w...4A..{...\Z...
+0100: '...5r
+== Info: SSLv3, TLS change cipher, Client hello (1):
+=> Send SSL data, 1 bytes (0x1)
+0000: .
+== Info: SSLv3, TLS handshake, Finished (20):
+=> Send SSL data, 16 bytes (0x10)
+0000: ...... C5.l...V.
+== Info: SSLv3, TLS change cipher, Client hello (1):
+<= Recv SSL data, 1 bytes (0x1)
+0000: .
+== Info: SSLv3, TLS handshake, Finished (20):
+<= Recv SSL data, 16 bytes (0x10)
+0000: ......j.M..n....
+== Info: SSL connection using RC4-SHA
+== Info: Server certificate:
+== Info: 	 subject: C=US; ST=Virginia; L=Arlington; O=General Services Administration; OU=GSAC; CN=gsaxcess.gov
+== Info: 	 start date: 2013-10-28 00:00:00 GMT
+== Info: 	 expire date: 2014-11-18 23:59:59 GMT
+== Info: 	 subjectAltName: gsaxcess.gov matched
+== Info: 	 issuer: C=US; O=VeriSign, Inc.; OU=VeriSign Trust Network; OU=Terms of use at https://www.verisign.com/rpa (c)10; CN=VeriSign Class 3 Secure Server CA - G3
+== Info: 	 SSL certificate verify ok.
+=> Send header, 143 bytes (0x8f)
+0000: GET / HTTP/1.1
+0010: User-Agent: curl/7.24.0 (x86_64-apple-darwin12.0) libcurl/7.24.0
+0050:  OpenSSL/0.9.8y zlib/1.2.5
+006c: Host: gsaxcess.gov
+0080: Accept: */*
+008d: 
+<= Recv header, 31 bytes (0x1f)
+0000: HTTP/1.1 200 Document follows
+<= Recv header, 19 bytes (0x13)
+0000: Mime-Version: 1.0
+<= Recv header, 37 bytes (0x25)
+0000: Date: Tue, 04 Feb 2014 17:07:20 GMT
+<= Recv header, 46 bytes (0x2e)
+0000: Last-Modified: Tue, 04 Feb 2014 12:53:57 GMT
+<= Recv header, 23 bytes (0x17)
+0000: Content-Length: 17039
+<= Recv header, 25 bytes (0x19)
+0000: Content-Type: text/html
+<= Recv header, 20 bytes (0x14)
+0000: Server: Web Server
+<= Recv header, 29 bytes (0x1d)
+0000: X-Frame-Options: SAMEORIGIN
+<= Recv header, 23 bytes (0x17)
+0000: Vary: Accept-Encoding
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 1456 bytes (0x5b0)
+0000: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+0040: "http://www.w3.org/TR/html4/loose.dtd">
+0069: <html xmlns="http://www.w3.org/1999/xhtml">
+0096: .<head>
+009f: ..<meta http-equiv="Content-Type" content="text/html; charset=ut
+00df: f-8" />
+00e8: ..<meta name="keywords" content="GSAXcess?, GSAXcess&#174;, GSAX
+0128: cess, GSAExcess, excess, surplus, personal, property, federal, d
+0168: isposal, system, FEDS, donation, Transfer, EADS, AAMS, Xcess, xc
+01a8: ess,">
+01b0:         <meta name="description" content="GSAXcess&#174; maintai
+01f0: ns records of all Federal Excess and Surplus Personal Property R
+0230: eported to General Services Administration (GSA).">
+0265:         <meta name="provider" content="FAS Federal Supply Servic
+02a5: e">
+02aa:         <meta http-equiv="Expires" CONTENT="0">
+02db:         <meta http-equiv="Cache-Control" CONTENT="no-cache">
+0319:         <meta http-equiv="Pragma" CONTENT="no-cache">
+0350: ..<title>GSAXcess&#174; Home - Welcome to GSAXcess&#174;</title>
+0392: ..<link href="/js/feds.css" rel="stylesheet" type="text/css">
+03d1: ..<link href="/css/xcess_home.css" rel="stylesheet" type="text/c
+0411: ss">
+0417: ..<script type="text/javascript" src="/js/xcessPages.js"></scrip
+0457: t>
+045b: ..<script type="text/javascript" src="/js/pubheader.js"></script
+049b: >
+049e: ..<script type="text/javascript" src="/js/xcess_home_jquery.js">
+04de: </script>
+04e9: ..<script type="text/javascript" src="/js/xcess_home_slides.js">
+0529: </script>
+0534: <script type="text/javascript">
+0555: 
+0557: function openFedswlog(icn)
+0573: {document.indexForm.Continue.value = "Continue";
+05a5: 
+05a7: if (icn==
+<= Recv data, 1456 bytes (0x5b0)
+0000: " ")
+0006: document.indexForm.ICN.value="";
+0028: else
+002e: document.indexForm.ICN.value = icn;
+0053: 
+0055: document.indexForm.submit();
+0073: } //end openFedswlog
+0089: 
+008b: function openRegister()
+00a4: {document.indexForm.Continue.value = "Register";
+00d6: document.indexForm.ICN.value = "";
+00fa: document.indexForm.submit();
+0118: }
+011b: 
+011d: var picName = new Array();
+0139: var picTit = new Array();
+0154: var picICN = new Array();
+016f: var picDesc = new Array();
+018b: var tabPic = [ "W91M4T30031005A.JPG","POWER AND HAND PUMPS","Exc
+01cb: ess", "703CA240165012A.JPG","RHINO ANTI-FATIGUE MATS (NO DIMENSI
+020b: ONS PROVIDED)","Excess", "FE634131290058A.JPG","BOOTS,EXTREME CO
+024b: LD","Excess", "W51HQS33453009VB.JPG","GOGGLES,INDUSTRIAL","Exces
+028b: s", "1923564028X020A.JPG","PHONE, DIGITAL","Excess", "8993234016
+02cb: 0003A.JPG","ELECTRONIC BOARD","Excess", "894623401601903A.JPG","
+030b: ABRASIVE MATERIALS","Excess", "R4227022500010A.JPG","HAMMER-DRIL
+034b: L,HYDRAULIC,PORTABLE","Excess", "SX14934013F003B.JPG","MUSICAL I
+038b: NSTRUMENTS","Excess", "N8425433170023A.JPG","BAGS AND SACKS","Ex
+03cb: cess", "89238340160003A.JPG","LIFTING JIG, 200# - 650#","Excess"
+040b: , "12315940160002A.JPG","BACKHOE LOADER","Excess",];
+0441: //var tabPic = [ "36570322570013A.JPG","Spreader","Surplus", "W8
+0481: 1ET422680001AA.JPG","Tractor","Surplus", "125C1622631217A.JPG","
+04c1: Sedan","Surplus", "148KFZ22500014A.JPG","BOAT WITH TRAILER AND M
+0501: OTOR","Surplus",];
+0515: // Specify the image files
+0531: var j=0;
+053b: var host = window.location.host;
+055d: function getPicInfo()
+0574: { for (var i = 0; i < tabPic.length - 1; i += 3)
+05a6: .{var scDL
+<= Recv data, 1456 bytes (0x5b0)
+0000: SCPic=tabPic[i];
+0012: ..var scItemName=tabPic[i+1];
+0031: ..var scItemStatus=tabPic[i+2];
+0052: ..var dlscPicLen=scDLSCPic.length;
+0076: ..var hist=0;
+0085: ../* Note: if the item is moved to history, then we will receive
+00c5:  ICN as HIST-BMAA008255A001A.JPG otherwise it will be BMAA008255
+0105: A001A.JPG */
+0113: ..var dlscLen=dlscPicLen -5;
+0131: ..var histPic=scDLSCPic.substr(hist,5);
+015a: ..var histDLSCPic="";
+0171: ..if (histPic=="HIST-")
+018a: ..{hist=5;
+0196: ...scDLSCPic=scDLSCPic.substr(hist,dlscLen);
+01c4: ...dlscLen=dlscLen-hist;
+01de: ..}
+01e3: ..picICN[j]= scDLSCPic.substr(0,dlscLen);
+020e: ..if (scItemName > " ")
+0227: ..{picTit[j]="ICN: " + picICN[j] + " - " + scItemName + " ( " + 
+0267: scItemStatus + " )";
+027d: ...picDesc[j]="ICN: " + picICN[j] + "<br>" + scItemName +  "<br>
+02bd:  ( " + scItemStatus + " )";
+02da: ..}
+02df: ..else
+02e7: ..{picTit[j]="ICN: " + picICN[j] + " - "  + scItemStatus;
+0322: ...picDesc[j]="ICN: " + picICN[j] + "<br>" + scItemStatus;
+035e: ..}
+0363: 
+0365: ..if (hist==5)
+0375: ..picName[j]="/img/history/"+scDLSCPic;
+039e: ..else
+03a6: ..picName[j]="/img/"+scDLSCPic;
+03c7: 
+03c9: ..j=j+1;
+03d3: .}
+03d7: }
+03da: getPicInfo();
+03e9: 
+03eb: function getPicTag(j)
+0402: {
+0405: .if (j < picName.length)
+041f: .{var liLine="";
+0431: ..liLine='<li><a onkeypress="openFedswlog('
+045e: ..+ "'"+picICN[j] + "'"+ ')" onclick="openFedswlog('
+0494: ..+  "'"+picICN[j] + "'"+ ')"' + ' title="Click here to see the 
+04d4: item details of ' + picTit[j] + '" href="#">'
+0503: ..+ '<img src="http://' + host + picName[j]
+0530: ..+ '" title="' + picTit[j] + '" alt="Picture of ' + picTit[j] +
+0570:  '" width="270" height="200"></a><div class="caption">' + picTit
+<= Recv data, 1456 bytes (0x5b0)
+0000: [j] + '</div>'
+0010: ..+ '</li>';
+001e: .}
+0022: .else
+0029: .liLine='<li>&nbsp;</li>';
+0045: .return liLine;
+0056: }
+0059: 
+005b: function buildSlidePic()
+0075: {var picSlideLine="";
+008c:  var bSlideDiv='<div class="slide"><ul>';
+00b7:      
+00be: .for (var i = 0; i < picName.length; i += 3)
+00ec: .{var j=i;
+00f8: ..var liLine1, liLine2, liLine3="";
+011d: ..liLine1=getPicTag(j);
+0136: ..liLine2=getPicTag(j+1);
+0151: ..liLine3=getPicTag(j+2);
+016c: ..picSlideLine+=bSlideDiv + liLine1 + liLine2 + liLine3 + '</ul>
+01ac: </div>';
+01b6: .}
+01ba: .$('.slides_container').html(picSlideLine);
+01e7: }
+01ea: </script>
+01f5: .</head>
+01ff: .<body id="gsaxcess">
+0216: ..<div id="header">
+022b: ...<noscript>
+023a: ....Form value defined
+0252: ...</noscript>
+0262: ...<script type="text/javascript">
+0286: ....var host = window.location.host;
+02ac: ....var temphttp = "https://";
+02cc: ....var appDir = "/fedsweb";
+02ea: ....var server = host + appDir;
+030b: ....var temptcode = "/fedsweb/";
+032d: ....var frmAction = temphttp + server + temptcode;
+0361: ....document.write('<form action="' + frmAction + '" method=post
+03a1:  name=indexForm>');
+03b6: ...</script>
+03c4: ...<noscript>
+03d3: ....Build header lines
+03eb: ...</noscript>
+03fb: ...<script type="text/javascript">
+041f: ....hdrFlag();
+042f: ....hdrBar1();
+043f: ...</script>
+044d: 
+044f: ...<input name="Continue" type="hidden" value="Continue">
+048a: ...<input name="ICN" type="hidden" value="ICN">
+04bb: 
+04bd: ...<table cellpadding="0" cellspacing="0" width=100%>
+04f4: ....<tr align="center">
+050d: .....<td id="L2">&nbsp;</td>
+052b: ....</tr>
+0536: ...</table>
+0543: ...<table border="0" cellpadding="0" cellspacing="0" width="100%
+0583: ">
+0587: ....<tr>
+0591: .....<td bgcolor="#9f0c0c">&nbs
+<= Recv data, 1456 bytes (0x5b0)
+0000: p;</td>
+0009: ....</tr>
+0014: ...</table>
+0021: ..</div>
+002b: 
+002d: ..<div class="wrapper clearfix">
+004f: ...<script type="text/javascript">
+0073: var scResponse=["$REPLACE=RESPONSE1",];
+009c: if (scResponse[0].substring(0, 1)=="$")
+00c5: document.write('<div class=hpmessage>Welcome to GSAXcess&#174;</
+0105: div>');
+010e: else
+0114: if (scResponse[0]=="You are successfully logged out")
+014b: {
+014e: document.write('<div class=hpmessage>You are successfully logged
+018e:  out</div>');
+019d: document.write('<div class=hpmessage>Click Login Button to Login
+01dd:  Again</div>');
+01ee: }
+01f1: else
+01f7: {var now = new Date();
+020f: min1=now.getMinutes();
+0227: now.setMinutes(min1);
+023e: hrs=now.getHours();
+0253: min1=now.getMinutes();
+026b: if (min1<10)
+0279: min1="0"+min1;
+0289: if (hrs<10)
+0296: hrs="0"+hrs;
+02a4: document.write('<div class=hpmessage>' + 'Your online session ex
+02e4: pired at <strong>' + hrs + ":" + min1 + '</strong> due to user i
+0324: nactivity</div>');
+0338: document.write('<div class=hpmessage>Click Login Button to Login
+0378:  Again</div>');
+0389: }
+038c: </script>
+0397: ...<div id="slides">
+03ad: ....<div class="slides_container">
+03d1: .....<!--<div class="slide">
+03ef: .....<ul>....
+03fe: .....<li>TEST</li> slide pictures here
+0426: .....</ul>
+0432: .....</div>-->
+0442: ....</div>
+044e: ....<a href="#" class="prev"></a>
+0471: ....<a href="#" class="next"></a>
+0494: ...</div>
+049f: ...<div class="button_container">
+04c2: ....<div class="nasa">
+04da: .....<a href="/NASAWel.htm" title="Click here to go to NASA Spac
+051a: e Programs - Historic Artifacts Prescreening" class="button-2"><
+055a: /a>
+055f: .....<p><a href="/NASAWel.htm" title="Click here to go to NASA S
+059f: pace Programs - H
+<= Recv data, 2912 bytes (0xb60)
+0000: istoric Artifacts Prescreening">Click here</a> to go to the NASA
+0040:  Prescreening Module where you can view and request NASA Space P
+0080: rogram historic artifacts including shuttle tiles.</p>
+00b8: ....</div>
+00c4: ....<div class="login_container">
+00e7: .....<div class="small register-text">Self-<a href="#" onkeypres
+0127: s="openRegister()" onclick="openRegister()" title="Click here to
+0167:  Self-Register if you do not have an Access code but have a .gov
+01a7:  or .mil email address">[Register]</a> for VIEW ONLY with .gov o
+01e7: r .mil email</div>
+01fb: .....<div class="login_button">
+021c: ......<span class="block small"><strong>GSAXcess&reg;</strong></
+025c: span>
+0263: ......<input type="button" class="button login" name="Login" val
+02a3: ue="Login" onkeypress="openFedswlog(' ')" onclick="openFedswlog(
+02e3: ' ')" title="Click here to login to GSAXcess&reg; System" />
+0321: .....</div>
+032e: ....</div>
+033a: ....<div class="clear"></div>
+0359: ...</div>
+0364: ...<div class="col-left">
+037f: ....<h1>GSA Publications</h1>
+039e: ....<ul>
+03a8: .....<li>
+03b3: ......<a href="http://gsa.gov/portal/content/136021" target="_bl
+03f3: ank">GSA Publications</a>
+040e: .....</li>
+041a: .....<li>
+0425: ......<a href="/htm/news/GSAXcess_Newsletter_DN46.pdf">GSA Perso
+0465: nal Property Newsletter</a>
+0482: .....</li>
+048e: ....</ul>
+0499: 
+049b: ....<h1>What's New</h1>
+04b4: ....<ul>
+04be: .....<li>
+04c9: ......<a href="/htm/XCESSWhatsnew.html" target="_blank">What's N
+0509: ew</a>
+0511: .....</li>
+051d: ....</ul>
+0528: 
+052a: ....<h1>How To</h1>
+053f: ....<ul>
+0549: .....<li>
+0554: ......<a href="http://gsa.gov/portal/content/127665">Dispose of 
+0594: Federal Excess Property</a>
+05b1: .....</li>
+05bd: .....<li>
+05c8: ......<a href="http://gsa.gov/portal/category/21179">Acquire Fed
+0608: eral Excess Property</a>
+0622: .....</li>
+062e: .....<li>
+0639: ......<a href="http://gsa.gov/portal/content/104591">Acquire Fed
+0679: eral Surplus Property</a>
+0694: .....</li>
+06a0: .....<li>
+06ab: ......<a href="http://www.gsa.gov/portal/ext/public/site/FMR/fil
+06eb: e/SubchB.html/category/21858/hostUri/portal">Personal Property F
+072b: ederal Management Regulations</a>
+074e: .....</li>
+075a: ....</ul>
+0765: 
+0767: ....<h1>Further Assistance</h1>
+0788: ....<ul>
+0792: .....<li>
+079d: ......<a href="/htm/xcesscontlinks.htm">Property Contacts</a>
+07dc: .....</li>
+07e8: .....<li>
+07f3: ......<a href="http://gsa.gov/portal/content/101639" target="_bl
+0833: ank">How to Obtain A GSAXcess&reg; User ID</a>
+0863: .....</li>
+086f: ....</ul>
+087a: 
+087c: ....<h1>Training Presentations</h1>
+08a1: ....<ul>
+08ab: .....<li>
+08b6: ......<a href="/htm/xcesstrainingdocs.htm">GSAXcess&reg; Trainin
+08f6: g Presentations</a>
+090b: .....</li>
+0917: .....<li>
+0922: ......<a href="/htm/cfltrainingdocs.htm">CFL Training Presentati
+0962: ons</a>
+096b: .....</li>
+0977: .....<li>
+0982: ......<a href="/htm/Training/xcess/AAMS_Presentation.ppt">Intern
+09c2: al Agency User Training Presentation</a>
+09ec: .....</li>
+09f8: .....<li>
+0a03: ......<a href="/htm/userguides/XCS_Multi_ICN_Pic_Upload_Guide.do
+0a43: c">Upload Multiple ICN Pictures</a>
+0a68: .....</li>
+0a74: .....<li>
+0a7f: ......<a href="/htm/userguides/XCS_Picture_Guidelines.ppt">Pictu
+0abf: re Guidelines</a>
+0ad2: .....</li>
+0ade: .....<li>
+0ae9: ......<a href="/htm/XCESS_TRAINING_UD.HTM">GSAXcess&reg; U & D T
+0b29: raining Presentations</a>
+0b44: .....</li>
+0b50: .....<li>
+0b5b: .....
+<= Recv data, 2912 bytes (0xb60)
+0000: .<a href="/htm/XCESS_WEB_X.HTM">GSAXcess&reg; Web-X Presentation
+0040: s</a>
+0047: .....</li>
+0053: .....<li>
+005e: ......<a href="/htm/training/xcess/AgencyApprovalTO.doc">GSAXces
+009e: s&reg; Electronic Approval Agency Instructions</a>
+00d2: .....</li>
+00de: .....<li>
+00e9: ......<a href="/htm/xcessuserguides.htm">GSAXcess&reg; User Guid
+0129: es</a>
+0131: .....</li>
+013d: ....</ul>
+0148: 
+014a: ....<h1>Training</h1>
+0161: ....<ul>
+016b: .....<li>
+0176: ......<a href="http://gsa.gov/portal/content/121568">Personal Pr
+01b6: operty Utilization & Disposal Training - Miami, FL 33130, Februa
+01f6: ry  25, 2014</a>
+0208: .....</li>
+0214: .....<!--.
+0220: .....<li>
+022b: ......<a href="http://gsa.gov/portal/content/120428">GSA Disposa
+026b: l Solutions Fall Workshop - Philadelphia, PA, November 19, 2013<
+02ab: /a>
+02b0: .....</li>.
+02bd: .....-->...
+02ca: .....<li>
+02d5: ......<a href="http://gsa.gov/portal/event/getEvents/future/cate
+0315: gory/22104/hostUri/portal">GSA Regional Training Events</a>
+0352: .....</li>
+035e: ....</ul>
+0369: 
+036b: ...</div>
+0376: ...<div class="col-right">
+0392: ....<h1>Overview</h1>
+03a9: ....<p>
+03b2: .....<strong>GSAXcess.gov</strong> is the entry site for the Fed
+03f2: eral Excess Personal Property Utilization Program and the Federa
+0432: l Surplus Personal Property Donation Program operated by the Gen
+0472: eral Services Administration. Your agency can report excess pers
+04b2: onal property for transfer by GSA to other Federal and State Age
+04f2: ncies for Surplus Property (SASPs) as well as search for and obt
+0532: ain excess personal property. Your agency can also report and tr
+0572: ansfer excess computers and peripheral equipment to schools and 
+05b2: educational nonprofit organizations through the Computers for Le
+05f2: arning program or post your CFL transfers done outside our syste
+0632: m. This site is not intended for the general public.
+0668: ....</p>
+0672: ....<h1>Live Virtual Screening of Excess Property - Thursday, Ja
+06b2: nuary 30, 2014</h1>
+06c7: ....<p><a href="https://interact.gsa.gov/gsa-event/live-virtual-
+0707: screening-excess-property" title="View Live Virtual Screening in
+0747: formation">View Live Virtual Screening information</a></p>
+0783: ....<h1>On-Site Special Screening - February 5-6, 2014 - VA Medi
+07c3: cal Center, Pittsburgh, PA</h1>
+07e4: ....<p>This event has been postponed due to winter storms. Detai
+0824: ls on rescheduling will be forthcoming</p>
+0850: <!-- ....<p><a href="/htm/SCREEN/va_Pittsburg_PA.htm" title="On-
+0890: Site Special Screening Information">View On-Site Special Screeni
+08d0: ng Information</a></p> -->
+08ec: ....
+08f2: ....<!--....
+0900: ....<h1>Furniture Special Screening - July 30 and Aug 6, 2013</h
+0940: 1>
+0944: ....<p><ul><strong>When:</strong> <li>The special screening is s
+0984: cheduled to begin at 9:00 AM EST to 3:00 PM.</li>
+09b7: .....<li>Tuesday, July 30th for Federal Agencies, and </li>
+09f4: ..... <li>Tuesday, August 6th for State Agencies for Surplus Pro
+0a34: perty (SASP) and approved donees.</li></ul>
+0a61: ....</p> -->
+0a6f: ....<h1>Processing Change for Federal Electronics</h1>
+0aa7: ....<p>
+0ab0: .....We are implementing the guidance in GSA <a href="/htm/SCREE
+0af0: N/FMR_Bulletin_B-34.pdf">FMR Bulletin, B-34, Disposal of Federal
+0b30:  Electronic Assets</a>. All customers are advise
+<= Recv data, 1456 bytes (0x5b0)
+0000: d that, effective Monday, 19 March 2012, the following notice ap
+0040: plies to federal electronics assets contained in this bulletin.
+0081: ....</p>
+008b: ....<p>
+0094: .....The Federal Government has determined that improper disposa
+00d4: l of used electronics may have potentially harmful effects on hu
+0114: man health and the environment. This/these electronic product(s)
+0154:  must be disposed of at their end of useful life in accordance w
+0194: ith all Federal, state, and local laws. The Federal Government s
+01d4: trongly encourages recycling these products through certified re
+0214: cyclers, even when such recycling is not required by Federal, st
+0254: ate or local laws. Information regarding certified recyclers is 
+0294: available at <a href="http://www.epa.gov/fec/resources/reuse.pdf
+02d4: ">http://www.epa.gov/fec/resources/reuse.pdf</a>.
+0307: ....</p>
+0311: ....<h1>Attention Federal Agencies Located in the Washington Met
+0351: ropolitan Area</h1>
+0366: ....<p>
+036f: .....GSA regularly assists in the disposal of large volumes of o
+03af: ffice furniture! If your agency is in need of assistance in eith
+03ef: er acquiring or disposing of office furniture, please contact Ri
+042f: ck Parker in the National Capital Region (NCR) Property Office a
+046f: t <a href="mailto:rick.parker@gsa.gov">rick.parker@gsa.gov</a>.
+04b0: ....</p>
+04ba: ....<h1>FDA Notice</h1>
+04d3: ....<p>
+04dc: .....<a href="/htm/SCREEN/FDA_NOTICE_SS1.PDF">Do NOT Report, Tra
+051c: nsfer, Donate or Sell STERIS System 1 Processor (click here for 
+055c: details)</a>
+056a: ....</p>
+0574: ...</div>
+057f: ...<div class="clear"></div>
+059d: 
+059f: ...<div class="qu
+<= Recv data, 1456 bytes (0x5b0)
+0000: icklinks">
+000c: ....<div class="column">
+0026: .....<h1>Contact Us</h1>
+0040: .....<h2>GSAXcess&reg; HelpDesk</h2>
+0066: .....<p>
+0070: ......1-866-333-7472 Option 1
+008f: ......<br />
+009d: ......<a href="mailto:GSAXcessHelp@gsa.gov">GSAXcessHelp@gsa.gov
+00dd: </a>
+00e3: .....</p>
+00ee: 
+00f0: .....<h2>CFL Helpdesk</h2>
+010c: .....<p>
+0116: ......1-866-333-7472 Option 2
+0135: ......<br />
+0143: ......<a href="mailto:Computers.Learning@gsa.gov">Computers.Lear
+0183: ning@gsa.gov</a>
+0195: .....</p>
+01a0: ....</div>
+01ac: ....<div class="column">
+01c6: .....<h1>Links</h1>
+01db: .....<h2><a href="/NASAWel.htm">NASA SSP Artifacts Prescreening<
+021b: /a></h2>
+0225: .....<p>
+022f: ......NASA Space Shuttle Program - Historic Artifacts Prescreeni
+026f: ng
+0273: .....</p>
+027e: .....<h2><a href="mailto:GSAXcess@gsa.gov?subject=Ask The Expert
+02be: ">GSAXcess&reg; Ask The Expert</a></h2>
+02e7: .....<p>
+02f1: ......Property Disposal Questions
+0314: .....</p>
+031f: .....<h2><a href="mailto:Computers.Learning@gsa.gov?subject=CFL 
+035f: Ask The Expert">CFL Ask The Expert</a></h2>
+038c: .....<p>
+0396: ......Computers for Learning Questions
+03be: .....</p>
+03c9: .....<h2><a href="http://gsaauctions.gov" target="_blank">GSA Au
+0409: ctions&reg;</a></h2>
+041f: .....<p>
+0429: ......Public Sales of Government Property
+0454: .....</p>
+045f: ....</div>
+046b: ....<div class="column">
+0485: .....<h1>&nbsp;</h1>
+049b: .....<h2><a href="https://mysales.fas.gsa.gov/sasy/sasywel/" tar
+04db: get="_blank">MySales</a></h2>
+04fa: .....<p>
+0504: ......MySales allows Federal Agencies the ability to review, mod
+0544: ify and maintain status of surplus and/or exchange/sale property
+0584:  reported to GSA for sale
+059f: .....</p>
+05aa: .....<
+<= Recv data, 1023 bytes (0x3ff)
+0000: h2><a href="http://computersforlearning.gov/" target="_blank">Co
+0040: mputers for Learning</a></h2>
+005f: .....<p>
+0069: ......School site to obtain excess computer equipment from feder
+00a9: al agencies
+00b6: .....</p>
+00c1: ....</div>
+00cd: ....<div class="column last">
+00ec: .....<h1>&nbsp;</h1>
+0102: .....<h2><a href="https://www.gsaadvantage.gov/" target="_blank"
+0142: >GSA Advantage!&reg;</a></h2>
+0161: .....<p>
+016b: ......To create or change your Agency Activity Address Code
+01a8: .....</p>
+01b3: .....<h2><a href="http://www.dispositionservices.dla.mil/" targe
+01f3: t="_blank">DLA RTD2</a></h2>
+0211: .....<p>
+021b: ......Property at the Defense Logistics Agency Disposition Servi
+025b: ces prior to rolling over to DOD Sales
+0283: .....</p>
+028e: ....</div>
+029a: ...</div>
+02a5: ..</div>
+02af: ..<div id="footer">
+02c4: ...<script type="text/javascript">
+02e8: ... footerLine();
+02fb: ... </script>
+030a: ..</div>
+0314: ..<script type="text/javascript">
+0337: ...$(function() {
+034a: ....buildSlidePic();
+0360: ....$("#slides").slides({
+037b: .....preload : true,
+0391: .....play : 6000,
+03a4: .....pause : 3000,
+03b8: .....slideSpeed : 500
+03cf: ....});
+03d8: ...});
+03e0: ..</script>
+03ed: .</body>
+03f7: </html> 
+== Info: Connection #0 to host gsaxcess.gov left intact
+== Info: Closing connection #0
+== Info: SSLv3, TLS alert, Client hello (1):
+=> Send SSL data, 2 bytes (0x2)
+0000: ..

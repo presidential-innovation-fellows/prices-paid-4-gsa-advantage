@@ -1,0 +1,321 @@
+<!-- This page works on both places GSAB as well as GSAC. There is no seperate page for GSAC-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="GSAXcess?, GSAXcess, GSAXcess&#174;, GSAXcess, GSAExcess, excess, surplus, personal, property, federal, disposal, system, FEDS, donation, Transfer, EADS, AAMS, Xcess, xcess,">
+<meta name="description" content="GSAXcess&#174; maintains records of all Excess and Surplus Personal Property Reported to General Services Administration (GSA).">
+<meta name="provider" content="FSS Federal Supply Service">
+<meta http-equiv="Expires" CONTENT="0">
+<meta http-equiv="Cache-Control" CONTENT="no-cache">
+<meta http-equiv="Pragma" CONTENT="no-cache">
+<script>
+var lnB1,lnC1="";
+lnB1='<TITLE>GSAXcess&#174; Home - Login to GSAXcess&#174; Practice (FEDSWLOG)</TITLE>';
+lnC1='<TITLE>GSAXcess&#174; Home - Login to GSAXcess&#174; (FEDSWLOG)</TITLE>';
+if (window.location.host=="gsaxcess.gov")
+document.write(lnC1);
+else
+document.write(lnB1);
+
+function newWinLog(loc,winName)
+{newWindow = window.open(loc,"DRMSRTD2","");
+}
+</script>
+<script type="text/javascript" language=javascript>
+var winFeatures;
+var winBrowser=navigator.appName;
+var isNN = (navigator.appName.indexOf("Netscape")!=-1);
+
+var NSX = navigator.appName == "Netscape";
+var IEX = navigator.appName == "Microsoft Internet Explorer";
+var BV = parseInt(navigator.appVersion);
+
+function hlpOpen(trnNumb)
+{
+var htmlName1="/help/htm/help";
+var htmlName2=trnNumb.toString();
+var htmlName3="F.htm";
+var htmlName=htmlName1+htmlName2+htmlName3;
+winFeatures='toolbar=yes,titlebar=yes,locationbar=no,status=yes,scrollbars=yes,resizable=yes';
+window.open(htmlName,'Help',winFeatures);
+}
+ 
+function newsOpen(trnNo)
+{
+newWindow = window.open("/htm/newsfedsf.htm","News","");
+}
+// to uppercase
+function uC(fld)
+{
+fld.value=fld.value.toUpperCase();
+}
+var imgSpace='<img src="/pgmimg/hp_spacer.gif" width="4" alt="">';
+function trim(fld)
+{fld.value=fld.value.replace(/^\s+/, "");
+}
+// warning after 25 mins
+var timer = null
+//begin Session Timeout Scripts
+var timeOutWin=null;
+function timeOut()
+{winFeatures='toolbar=yes,titlebar=yes,locationbar=no,status=yes,scrollbars=yes,resizable=yes,alwaysRaised=yes';
+timeOutWin=window.open('/htm/xcesstimeout.htm','Timeout','width=550,height=200,top=160,left=200',"winFeatures");
+if (timeOutWin)
+{window.focus();
+timeOutWin.focus();
+}
+else
+window.focus();
+}
+var timer=null;
+var timerRetHome=null;
+timer = setTimeout("timeOut()",3240000);
+function saveData()
+{if (timeOutWin)
+timeOutWin.close();
+document.forms[0].SELLNK.value="RH";
+document.forms[0].submit();
+}
+timerRetHome = setTimeout("saveData()",3540000);
+// 1000 milliseconds = 1 sec (e.g. for 3 mins, 3*60*1000 = 180,000)
+</script>
+<script type="text/javascript" language=javascript src="/js/xcesspages.js"></script>
+<script type="text/javascript" language=javascript src="/js/fedswlog.js"></script>
+<script type="text/javascript" language="JavaScript" src="/js/pubheader.js"></script>
+<link rel="STYLESHEET" type="text/css" href="/js/feds.css">
+<style type="text/css">
+.D1 {font-family:helv;font-weight:Bold;text-align:right;color:black;font-size:9pt;}
+.D2 {font-family:helv;text-align:left;color:black;font-size:9pt;}
+.D3 {font-family:helv;font-weight:Bold;text-align:left;color:black;font-size:9pt;}
+.D4 {font-family:helv;font-weight:Bold;text-align:left;color:red;font-size:11pt;}
+#J {font-family:helv;text-align:left;color:black;font-size:9pt; padding: 5px 5px;}
+.tit{background-color:e2eef9;font-family:helv;font-weight:Bold;text-align:left;color:black;font-size:12pt;}
+.right{border:1px solid #e6e2d6;display:block;background-color:#f0f0f0;text-decoration:none;}
+.titRight{color:#cc0000;font-size:12pt;font-weight:bold;background-color:#e6e2d6;border:1px solid #e6e2d6;}
+.left{display:block;text-decoration:none;text-align:center;}
+.titLeft{color:#cc0000;font-size:12pt;font-weight:bold;background-color:white;}
+.bdrbtm{border-bottom:1px solid #ffffff;}
+.lgTit {color:#9a0000; text-align:center; font-family:arial,helvetica,verdana; font-size:15px; font-weight:bold;}
+</style>
+<style>
+/* =Left-Nav styles
+---------------------------*/
+#navcontainer {
+	border-top: 1px solid #fff;
+	font-size: 11pt;
+	font-weight: bold;
+}
+#navcontainer #GSACatName {
+	background: #c00 url(/pgmimg/HomePage/nav_notchedCnr.gif) no-repeat top left;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	font-size: 100%;
+	min-height: 10px;
+	padding: 5px 5px 5px 20px;
+}
+/* setting the height for IE */
+#html #navcontainer #GSACatName {
+	height: 10px;
+}
+h5 {
+	background: #aa998a url(/pgmimg/HomePage/block4_hdr.gif) no-repeat top left;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	font-size: 100%;
+	min-height: 9px;
+	margin: 0;
+	padding: 5px 5px 5px 20px;
+}
+</style>
+</HEAD>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" onLoad="setFocus(1);errWarn();">
+<script type="text/javascript" language="JavaScript">
+var host = window.location.host;
+var temphttp="https://"; 
+var appDir="/fedsweb";
+var server=host+appDir;
+var temptcode="/fedswlog/";
+var frmAction = temphttp+server+temptcode;
+document.write ('<form action="'+frmAction+'" method=post name=fedswlog autocomplete="off">');
+</script>
+<input type=hidden name=scParam VALUE="2014030214184551">
+<input type=hidden name=SELLNK value="">
+<script type="text/javascript" language="JavaScript">
+hdrFlag();
+hdrBar1();
+var scWarn=["",];
+var scResp=["Enter User ID and Password then click 'Login' button"];
+</script>
+<table bgcolor="#ffffff" border="0" bordercolor="#ffffff" cellpadding="0" cellspacing="0" marginheight="0" marginwidth="0" width=100% summary="This table contains Helpdesk Links">
+<tr align="center">&nbsp;</td></tr>
+</table>	
+<table bgcolor="#9f0c0c" border="1" bordercolor="#ffffff" cellpadding="0" cellspacing="0"
+marginheight="0" marginwidth="0" width=100% summary="This table contains blank items">
+<tr>
+<td width="60%" id="HC1" nowrap>
+<img src="/pgmimg/hp_spacer.gif" alt="">
+<script type="text/javascript">
+var homeLn="";
+homeLn='<td nowrap><a href=' 
++ pubHost
++' title="GSAXcess&#174; Home" id=BTNBAR>&nbsp;Home&nbsp;</a>'
++'<img src="/pgmimg/hp_spacer.gif" alt=""></td>';
+document.write(homeLn);
+</script>
+</tr>
+</table>
+
+<table align=center cellpadding="0" width="99%" summary="This table contains Welcome to GSAXcess page">
+<tr><td colspan=2 id=HE align=center><h4>Welcome to GSAXcess&#174;</h4></td></tr>
+<tr><td colspan=2 id=MSG>Enter User ID and Password then click 'Login' button</td></tr>
+<tr>
+<td width=70% valign="top">
+<table width=100% summary="This table contains Login information">
+<tr>
+<td>&nbsp;</td>
+<td class="lgTit">
+<script type="text/javascript">
+var scSendNASA="";
+var lnB1,lnC1="";
+lnC1='GSAXcess&#174; Login';
+lnB1='GSAXcess&#174; Practice Login';
+lnNASAC1='NASA SSP Artifacts Prescreening Login';
+lnNASAB1='NASA SSP Artifacts Prescreening Practice Login';
+if (window.location.host=="gsaxcess.gov")
+{if (scSendNASA=="Y")
+document.write(lnNASAC1);
+else
+document.write(lnC1);
+}
+else
+{if (scSendNASA=="Y")
+document.write(lnNASAB1);
+else
+document.write(lnB1);
+}
+</script>
+</td>
+</tr>
+<tr>
+<td width=20%>&nbsp;</td>
+<td width=45%>
+<table align=middle summary="This table contains Login information">
+<tr><td colspan=2>&nbsp;</td></tr>
+<tr>
+<td class=D1><label for="scLidId">&nbsp;User ID&nbsp;</td>
+<td class=D2><INPUT onBlur="uC(this)" title="Enter A 6 digit User ID/User Code assigned by GSAXcess&#174;" autocomplete="off" maxLength=6 size=6 name=scLid VALUE="" ID="scLidId"></td>
+</tr>
+<tr>
+<td class=D1><label for="scPasswordId">&nbsp;Password &nbsp;</label></td>
+<td class=D2><INPUT onBlur="uC(this)" title="Enter the Password for your User ID" autocomplete="off" type=password maxlength=10 size=10 name=scPassword VALUE="" ID="scPasswordId">&nbsp;&nbsp;<input type="image" name="Login" src="/pgmimg/hp_login.jpg" alt="Login" title="Click here to login to GSAXcess&#174; System" width="47" height="18" border="0" onClick="return chkSignOn()" onKeyPress="return chkSignOn()">
+</td>
+</tr>
+<script type="text/javascript">
+var secQtn=["&nbsp",];
+if (secQtn[0] >" ")
+{document.write('<tr><td class=D1><label for="scSecAnswerId">&nbsp;&nbsp&nbsp;</label></td>'
++ '<td class=D2><input onblur="uC(this)" onkeyup="return autoTab(this,20, event)"'
++ ' title="Enter the Answer for your clue question" type="hidden" maxlength=20 size=20 name=scSecAnswer ID="scSecAnswerId" autocomplete="off" VALUE=""></label></td></tr>');
+}
+</script>
+<tr>
+<td colspan=2 class=D2>
+<div><img src="/pgmimg/hp_spacer.gif" alt="" height="10"></div>
+<strong>Change Password?</strong> Enter User ID, Password and <A href="javascript:selLnk('CP')" onClick="return chkSignOn()" onKeyPress="return chkSignOn()" onMouseOver="f1(this)" onMouseOut="f3(this)" onFocus="f1(this)" onBlur="f3(this)" title="Enter User ID, Password and click here to Change your Password" class="body"><strong> Click here to Change Password</strong></A>.</td>
+</tr>
+<tr>
+<td colspan=2 class=D2>
+<div><img src="/pgmimg/hp_spacer.gif" alt="" height="10"></div>
+<strong>Forgot Password?</strong> Enter User ID and <A href="javascript:selLnk('FP')" onClick="return forgotPwd()" onKeyPress="return forgotPwd()" onMouseOver="f1(this)" onMouseOut="f3(this)" onFocus="f1(this)" onBlur="f3(this)" title="Enter User ID and click here to Retrieve your Password" class="body"><strong>Click here to Retrieve Password</strong></A>.</td>
+</tr>
+<tr>
+<td colspan=2 class=D2>
+<div><img src="/pgmimg/hp_spacer.gif" alt="" height="10"></div>
+<strong>Update User Contact Information?</strong> Enter User ID, Password and <A href="javascript:selLnk('UU')" onClick="return chkSignOn()" onKeyPress="return chkSignOn()" onMouseOver="f1(this)" onMouseOut="f3(this)" onFocus="f1(this)" onBlur="f3(this)" title="Enter User ID, Password and click here to Update User Contact Information" class="body"><strong> Click here to Update your Contact Information</strong></A>.</td>
+</tr>
+<script>
+if (scSendNASA=="Y")
+document.write('<tr>'
++'<td colspan=2 class=D4>'
++'<div><img src="/pgmimg/hp_spacer.gif" alt="" height="10"></div>'
++'<strong>Note:</strong> This module contains Pop-Ups. Before Login, go to Tools in your browser and under Internet Options Delete Files.   After Login, disable the Pop-Up Blocker.  Go to Tools and under Pop-Up Blocker click Turn Off Pop-up Blocker.</p></td>'
++'</tr>'
++'<tr>'
++'<td colspan=2 class=D2>'
++'<div><img src="/pgmimg/hp_spacer.gif" alt="" height="10"></div>'
++'<strong>To eliminate download problems experienced with the following common browsers: '
++'<ul>'
++'<li>Internet Explorer - Version 6.0 or later </li>'
++'<li>Netscape Navigator</li>'
++'</ul>'
++'You can use the preferred NEW Mozilla Firefox to eliminate problems when accessing NASA Prescreening module: </strong><br>'
++'<A href="http://www.mozilla.com/en-US/firefox/ie.html" onMouseOver="f1(this)" onMouseOut="f3(this)" onFocus="f1(this)" onblur="f3(this)" title="Click here to download New Mozilla Firefox browser" class="body"><strong>Click here to Free Download Firefox Browser</strong></A>.'
++'</td>'
++'</tr>');
+</script>
+
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td class="right" valign=top>
+<div><h5>GSAXcess&#174; HelpDesk</h5></div>
+<div><img src="/pgmimg/hp_spacer.gif" alt="" height="5"></div>
+<div id=J><strong>GSAXcess&#174; HelpDesk</strong> <br>1-866-333-7472<br>
+<a href="mailto:GSAXcesshelp@gsa.gov" onMouseOver="f1(this)" onMouseOut="f3(this)" onFocus="f1(this)" onBlur="f3(this)" title="GSAXcesshelp@gsa.gov" class="body"><strong>GSAXcessHelp@gsa.gov</strong></a>
+</div>
+<div><img src="/pgmimg/hp_spacer.gif" alt="" height="5"></div>
+<script type="text/javascript">
+var regLine="";
+if (scSendNASA=="Y")
+regLine='<div><h5>NASA Artifact and Tile Registration</h5></div>'
++'<div><img src="/pgmimg/hp_spacer.gif" alt="" height="5"></div>'
++'<div id=J>'
++'<a href="'
++'/fedsweb/fedsweb/?Continue=NASARegister&ICN=""&NASA=NASA'
++'" onMouseOver="f1(this)" onMouseOut="f3(this)" onFocus="f1(this)" onblur="f3(this)" title="Click here to Register" class="body"><strong>Register</strong></a>'
++' to receive a User ID and password to request artifacts and tiles. You will need the Department of Education' + "'" + 's statistics tracking number '
++'(an <a href="http://nces.ed.gov/" onMouseOver="f1(this)" onMouseOut="f3(this)" onFocus="f1(this)" onblur="f3(this)" title="National Center for Education and Statistics" class="body"><strong>NCES</strong></a> Number if you are a school or an <a href="http://nces.ed.gov/IPEDS/" onMouseOver="f1(this)" onMouseOut="f3(this)" onFocus="f1(this)" onblur="f3(this)" title="Integrated Postsecondary Education Data System" class="body"><strong>IPEDS</strong></a> '
++'Number if you are a University). <strong>NOTES:</strong> If you are acquiring NASA program artifacts [other than tiles] by registering with an NCES or IPEDS number, DO NOT request the same artifact through the State Agency for Surplus Property [SASP]. Only schools and universities can request a tile, and you must register to request a tile. Tiles cannot be requested through the SASP.';
+else
+regLine='<div><h5>GSAXcess&#174; Register</h5></div>'
++'<div><img src="/pgmimg/hp_spacer.gif" alt="" height="5"></div>'
++'<div id=J>If you do not have an User ID but have a <strong>.gov</strong> or <strong>.mil</strong> email address, <A href="#" onClick="setAct();selLnk(' + "'RR'" + ')" onKeyPress="setAct();selLnk('+ "'RR'" + ')" onMouseOver="f1(this)" onMouseOut="f3(this)" onFocus="f1(this)" onblur="f3(this)" title="Click here to Register" class="body"><strong>Register</strong></A> here. The system will assign you a <strong>generic User ID</strong> that can be used to search our data base.</div>';
+
+document.write(regLine);
+</script>
+<div><img src="/pgmimg/hp_spacer.gif" alt="" height="5"></div>
+<script type="text/javascript">
+var ln1="";
+var lnB1,lnB2="";
+var lnC1,lnC2="";
+lnB1='<div><h5>GSAXcess&#174; Practice Home</h5></div>';
+ln1='<div><img src="/pgmimg/hp_spacer.gif" alt="" height="5"></div>';
+lnB2='<div id=J><strong>Click here to go to </strong><A href="http://gsaxcesspractice.fas.gsa.gov" onMouseOver="f1(this)" onMouseOut="f3(this)" onFocus="f1(this)" onblur="f3(this)" title="Click here to go to GSAXcess&#174; Practice Home" class="body" onClick="setAct()" onKeyPress="setAct()"><strong>GSAXcess&#174; Practice Home</strong></A>.</div>';
+
+lnC1='<div><h5>GSAXcess&#174; Home</h5></div>';
+lnC2='<div ID=J><strong>Click here to go to </strong><A href="http://gsaxcess.gov" onMouseOver="f1(this)" onMouseOut="f3(this)" onFocus="f1(this)" onblur="f3(this)" title="Click here to go to GSAXcess&#174; Home" class="body" onClick="setAct()" onKeyPress="setAct()"><strong>GSAXcess&#174; Home</strong></A>.</div>';
+if (host=="gsaxcess.gov")
+document.write(lnB1+ln1+lnB2);
+else
+document.write(lnC1+ln1+lnC2);
+</script>
+
+<p>
+</td>
+<p>
+</tr>
+</table>
+<hr>
+<script type="text/javascript" language="JavaScript">
+ftrLn();
+</script>
+<input type="hidden" name="scTXTypViol" VALUE="">
+<input type="hidden" name="WEBPCMTRANSID" VALUE="0112324,3091529">
+<input name="scAction" type="hidden" value="">
+</form>
+</body>
+</HTML>

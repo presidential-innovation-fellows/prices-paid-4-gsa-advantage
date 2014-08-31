@@ -1,0 +1,36 @@
+{
+  "name" : "Cart Builder for CAP Communicart",
+  "short_name" : "cartbuilder",
+  "version" : "0.3",
+  "description" : "Add items from a commerce site to a cart",
+  "background" : { "page": "gsaCartBuilderBg.html" },
+  "icons" : {
+    "48": "icon48.png"          
+    },
+  "permissions" : [
+	      "tabs",
+	      "http://www.homedepot.com/*",
+	      "https://www.gsaadvantage.gov/*" ],
+  "page_action": {
+    "default_icon": {                  
+        "19": "icon19.png",          
+        "38": "icon38.png"
+        },
+    "default_title": "build a cart",
+    "default_popup": "popup.html"
+    },
+  "content_scripts": [
+	   {
+	   "matches": ["http://www.homedepot.com/*"],
+	   "css": ["gsaCartBuilder.css"],
+	   "js": [ "jquery-1.10.2.js", "gsaCartBuilder.js"]
+	   }
+  ],
+  "minimum_chrome_version" : "6.0.0.0",
+  "manifest_version": 2,
+  "web_accessible_resources": [
+      "gsaAdvItemTemplate.html",
+      "gsaAdvCredsTemplate.html",
+      "images/*"
+  ]
+}

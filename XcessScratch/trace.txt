@@ -1,0 +1,170 @@
+== Info: About to connect() to gsaxcess.gov port 443 (#0)
+== Info:   Trying 159.142.4.86...
+== Info: connected
+== Info: Connected to gsaxcess.gov (159.142.4.86) port 443 (#0)
+== Info: SSLv3, TLS handshake, Client hello (1):
+=> Send SSL data, 112 bytes (0x70)
+0000: ...l..R.,...k........p.;.F.*.t..1+.>@....9.8.5.......3.2./.....
+0040: ....................................gsaxcess.gov
+== Info: SSLv3, TLS handshake, Server hello (2):
+<= Recv SSL data, 85 bytes (0x55)
+0000: ...Q....a..3......>.......?...'....... .V^j.......]CY........g..
+0040: D...|................
+== Info: SSLv3, TLS handshake, CERT (11):
+<= Recv SSL data, 4123 bytes (0x101b)
+0000: .........G0..C0..+.........<.8....y=..h.C0...*.H........0..1.0..
+0040: .U....US1.0...U....VeriSign, Inc.1.0...U....VeriSign Trust Netwo
+0080: rk1;09..U...2Terms of use at https://www.verisign.com/rpa (c)101
+00c0: /0-..U...&VeriSign Class 3 Secure Server CA - G30...131028000000
+0100: Z..141118235959Z0..1.0...U....US1.0...U....Virginia1.0...U....Ar
+0140: lington1(0&..U....General Services Administration1.0...U....GSAC
+0180: 1.0...U....gsaxcess.gov0.."0...*.H.............0.........}..m...
+01c0: l\..RL.n....r...t.U^Rm.3....^O..5`....o...G...O(.K.i.....;C=..`.
+0200: ......Q....b...X...%@f.....R+..9U{...6{.:g...[.q]...(..i...sj/.L
+0240: .@.$.,(.G./U..i.vw6e...+..X.C..._]s`.............R`#9...OQ3$...5
+0280: .....?.?.G^....Y..0C...^..W1F_.h..{...i.......!)N.w..K2E........
+02c0: |0..x0...U....0...gsaxcess.gov0...U....0.0...U...........0...U.%
+0300: ..0...+.........+.......0C..U. .<0:08..`.H...E..60*0(..+........
+0340: .https://www.verisign.com/cps0...U.#..0....D\.SD..~. .%..c..y.0E
+0380: ..U...>0<0:.8.6.4http://SVRSecure-G3-crl.verisign.com/SVRSecureG
+03c0: 3.crl0v..+........j0h0$..+.....0...http://ocsp.verisign.com0@..+
+0400: .....0..4http://SVRSecure-G3-aia.verisign.com/SVRSecureG3.cer0..
+0440: .*.H.............*.....}Y..S.w.x.[..Sa.m..] .H......y2.u..#.....
+0480: J.Xv.K...].t..B.;2.:.Su.!...:<....U..*X....e......+.H^B.=2...a.7
+04c0: q.4.i.ZF...}~2...'...9..\..IPM..].f[ST......%....yn.T.C&\...Z...
+0500: .......\o.....5g.0..\....8O!.>.'...........k...A.O.S.+.O#....N..
+0540: =.&..........X.e....0...0..........n.z... ......R..0...*.H......
+0580: ..0..1.0...U....US1.0...U....VeriSign, Inc.1.0...U....VeriSign T
+05c0: rust Network1:08..U...1(c) 2006 VeriSign, Inc. - For authorized 
+0600: use only1E0C..U...<VeriSign Class 3 Public Primary Certification
+0640:  Authority - G50...100208000000Z..200207235959Z0..1.0...U....US1
+0680: .0...U....VeriSign, Inc.1.0...U....VeriSign Trust Network1;09..U
+06c0: ...2Terms of use at https://www.verisign.com/rpa (c)101/0-..U...
+0700: &VeriSign Class 3 Secure Server CA - G30.."0...*.H.............0
+0740: ..............E...%....>....9.....V...e.DOM.o..J..N..h...{.....4
+0780: 4..[.I{b.H.t..xl.S..C&WX3.;3....N.$..}d..tJ4..........K;.c...-.
+07c0: ......=..7..H5.)Px.Ec..AO...{...q.P.(....S...,#.........<n....56
+0800: .Q.i...Vno.W........JTj.M......g..DU3.$.?SE...<.m...J...7....
+0840: ...{8N...........0...04..+........(0&0$..+.....0...http://ocsp.v
+0880: erisign.com0...U.......0.......0p..U. .i0g0e..`.H...E....0V0(..+
+08c0: .........https://www.verisign.com/cps0*..+.......0...https://www
+0900: .verisign.com/rpa04..U...-0+0).'.%.#http://crl.verisign.com/pca3
+0940: -g5.crl0...U...........0m..+........a0_.].[0Y0W0U..image/gif0!0.
+0980: 0...+..............k...j.H.,{..0%.#http://logo.verisign.com/vslo
+09c0: go.gif0(..U...!0...0.1.0...U....VeriSignMPKI-2-60...U.......D\.S
+0a00: D..~. .%..c..y.0...U.#..0....e......0..C9...3130...*.H.........
+0a40: ......$.....X..6....K......S........X.ul...L...-...n."pU. 3@3..e
+0a80: ...C7....lp....;.7.zm...}IJ....(...w$..&.m..@Ag.':..H.".......{.
+0ac0: ....v*..-.nt...."....+....\.P....b7..e..AS.....X(...[...J....&.
+0b00: .fx.J..B....B....g$.a......&...n..u.F....^.....G...(l%'....X..8.
+0b40: ...f...0...0..9.......%...0a..+...M|..0...*.H........0_1.0...U..
+0b80: ..US1.0...U....VeriSign, Inc.1705..U....Class 3 Public Primary C
+0bc0: ertification Authority0...061108000000Z..211107235959Z0..1.0...U
+0c00: ....US1.0...U....VeriSign, Inc.1.0...U....VeriSign Trust Network
+0c40: 1:08..U...1(c) 2006 VeriSign, Inc. - For authorized use only1E0C
+0c80: ..U...<VeriSign Class 3 Public Primary Certification Authority -
+0cc0:  G50.."0...*.H.............0.........$..)z5.`...K;N.|.<E..+..)..
+0d00: W..d..'....1.]".*..B....U...K...~.W..C.fb.a.`.......b.=T..I.YT.&
+0d40: .+........3I.CcjRK...pQM..i{.p....t.{]KV....w....%....g.........
+0d80: ...:......<....7........=..u.3...@.t$.!.....*R....I..cG.<i...G.+
+0dc0: ~O.......C.gs...~.?.s.3..]?4....S.%..........0...0...U.......0..
+0e00: ..01..U...*0(0&.$.". http://crl.verisign.com/pca3.crl0...U......
+0e40: .....0=..U. .60402..U. .0*0(..+.........https://www.verisign.com
+0e80: /cps0...U.......e......0..C9...3130m..+........a0_.].[0Y0W0U..i
+0ec0: mage/gif0!0.0...+..............k...j.H.,{..0%.#http://logo.veris
+0f00: ign.com/vslogo.gif04..+........(0&0$..+.....0...http://ocsp.veri
+0f40: sign.com0>..U.%.705..+.........+.........+.........`.H...B....`.
+0f80: H...E...0...*.H....................Z.. .Y.b....N..Y....8.N.f....
+0fc0: ....m>J. .<..eT..D...,k>......c..^..*g..3.*..V.#....:.Y..E5..[.f
+1000: .P..mW..x....W...K.....~...
+== Info: SSLv3, TLS handshake, Server finished (14):
+<= Recv SSL data, 4 bytes (0x4)
+0000: ....
+== Info: SSLv3, TLS handshake, Client key exchange (16):
+=> Send SSL data, 262 bytes (0x106)
+0000: ......8`X.T./7...?..3...m...0Kz.[e....M.>G.....r..p$+..P..Iyj..R
+0040: .......9.r....pR.r....w..C..c..6X..0.3_....H.............ZM?>a..
+0080: Vy.r.o.iQ.75.....)...D..S<.;...).M.*...d..#.Xf.+L..$....q..e..C
+00c0: ..`_|.....,....U!..../..v..h=.....#.)..1..3C.....07k....V.V$ ...
+0100: ...h..
+== Info: SSLv3, TLS change cipher, Client hello (1):
+=> Send SSL data, 1 bytes (0x1)
+0000: .
+== Info: SSLv3, TLS handshake, Finished (20):
+=> Send SSL data, 16 bytes (0x10)
+0000: .....)..c...w...
+== Info: SSLv3, TLS change cipher, Client hello (1):
+<= Recv SSL data, 1 bytes (0x1)
+0000: .
+== Info: SSLv3, TLS handshake, Finished (20):
+<= Recv SSL data, 16 bytes (0x10)
+0000: ....M.[.........
+== Info: SSL connection using RC4-SHA
+== Info: Server certificate:
+== Info: 	 subject: C=US; ST=Virginia; L=Arlington; O=General Services Administration; OU=GSAC; CN=gsaxcess.gov
+== Info: 	 start date: 2013-10-28 00:00:00 GMT
+== Info: 	 expire date: 2014-11-18 23:59:59 GMT
+== Info: 	 subjectAltName: gsaxcess.gov matched
+== Info: 	 issuer: C=US; O=VeriSign, Inc.; OU=VeriSign Trust Network; OU=Terms of use at https://www.verisign.com/rpa (c)10; CN=VeriSign Class 3 Secure Server CA - G3
+== Info: 	 SSL certificate verify ok.
+=> Send header, 1137 bytes (0x471)
+0000: POST /fedswel/ HTTP/1.1
+0019: Host: gsaxcess.gov
+002d: Connection: keep-alive
+0045: Content-Length: 153
+005a: Cache-Control: max-age=0
+0074: Accept: text/html,application/xhtml+xml,application/xml;q=0.9,im
+00b4: age/webp,*/*;q=0.8
+00c8: Origin: https://gsaxcess.gov
+00e6: User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) Apple
+0126: WebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.77 Safari/537
+0166: .36
+016b: Content-Type: application/x-www-form-urlencoded
+019c: Referer: https://gsaxcess.gov/fedsweb/fedsweb/
+01cc: Accept-Encoding: gzip,deflate,sdch
+01f0: Accept-Language: en-US,en;q=0.8
+0211: Cookie: fsr.s=%7B%22f%22%3A1390261076609%2C%22v%22%3A1%2C%22rid%
+0251: 22%3A%22def5437-92536256-0a87-87d6-ba673%22%2C%22ru%22%3A%22http
+0291: s%3A%2F%2Fgsaxcess.gov%2Ffedsweb%2Ffedswlog%2F%22%2C%22r%22%3A%2
+02d1: 2gsaxcess.gov%22%2C%22st%22%3A%22%22%2C%22to%22%3Anull%2C%22c%22
+0311: %3A%22https%3A%2F%2Fgsaxcess.gov%2Ffedsweb%2Ffedswlog%2F%22%2C%2
+0351: 2pv%22%3A1%2C%22lc%22%3A%7B%22d0%22%3A%7B%22v%22%3A1%2C%22s%22%3
+0391: Afalse%7D%7D%2C%22cd%22%3A0%7D; __utma=59827771.181935475.139025
+03d1: 7531.1390323362.1390370814.4; __utmb=59827771.1.10.1390370814; _
+0411: _utmc=59827771; __utmz=59827771.1390257531.1.1.utmcsr=(direct)|u
+0451: tmccn=(direct)|utmcmd=(none)
+046f: 
+=> Send data, 162 bytes (0xa2)
+0000: scParam:2014012016012939PUBW1000+++++++++2014012016384411&scGSNa
+0040: me=&scGSOptn=1&scOption=00&SELLNK=RH&ROW=0&scSelDLSCNo=+&SAVEDAT
+0080: A=&WEBPCMTRANSID=1004944%2C3461361
+== Info: upload completely sent off: 162 out of 162 bytes
+<= Recv header, 30 bytes (0x1e)
+0000: HTTP/1.1 501 Not Implemented
+<= Recv header, 19 bytes (0x13)
+0000: Mime-Version: 1.0
+<= Recv header, 37 bytes (0x25)
+0000: Date: Thu, 23 Jan 2014 14:53:12 GMT
+<= Recv header, 21 bytes (0x15)
+0000: Content-Length: 143
+<= Recv header, 25 bytes (0x19)
+0000: Content-Type: text/html
+<= Recv header, 24 bytes (0x18)
+0000: Connection: Keep-Alive
+<= Recv header, 24 bytes (0x18)
+0000: Keep-Alive: timeout=90
+<= Recv header, 20 bytes (0x14)
+0000: Server: Web Server
+<= Recv header, 29 bytes (0x1d)
+0000: X-Frame-Options: SAMEORIGIN
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 143 bytes (0x8f)
+0000: <HTML><HEAD><TITLE>Server Error</TITLE></HEAD><BODY><H2>501 Not 
+0040: Implemented</H2><P>This webserver does not implement your reques
+0080: t</BODY></HTML>
+== Info: Connection #0 to host gsaxcess.gov left intact
+== Info: Closing connection #0
+== Info: SSLv3, TLS alert, Client hello (1):
+=> Send SSL data, 2 bytes (0x2)
+0000: ..

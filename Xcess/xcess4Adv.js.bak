@@ -1,0 +1,149 @@
+//
+// This file lives at:
+//
+
+(function() {
+    var advantage = {
+        content: {
+            addMeToSvcsMenu:
+            'See Prices Paid',
+            addMeToSortbar1:
+            '<h2>Prices Paid</h2><p>Find data on prices paid for <strong>',
+            addMeToSortbar2:
+            '</strong>.</p><p>Visit the Prices Paid portal for more info.</p>',
+            nothing: 'I always forget to skip commas at the end of an object'
+        },
+        queries: {
+            svcsMenu:
+            'div#sidemenu ul#MenuBar1 li ul li a[href="http://www.gsa.gov/portal/content/105201"]',
+            sortbar:
+            'div#wrapper div#container div#main table tbody tr td div#sortbarDeptView',
+            itemSearch: 'table tr td font strong',
+            nothing: 'this is so I dont have to deal with commas'
+        }
+    };
+
+    function searchMe(query, numResults, resultHandler) {
+      function handleSearchResult(dataFromSearch, status, jqXhr) {
+        if (dataFromSearch === null || typeof dataFromSearch !== 'object') {
+           alert('No results returned.');
+           resultHandler([]);
+        }
+        resultHandler(dataFromSearch);
+      }
+            executeTemplate(templateMap, 'item');
+    }
+
+    function onItemTemplateLoaded(data) {
+         var resultsToDisplay = '';
+         var hidden = false;
+         $(data).insertBefore('div#sectionheader');
+         $('p#toggler').click(function() {
+            if (hidden === false) {
+                $('div#results').slideUp();
+                hidden = true;
+                $('p#toggler').text('Click Here to Expand');
+            }
+            else {
+                $('div#results').slideDown();
+                hidden = false;
+                $('p#toggler').text('Click Here to Hide');
+            }
+         });
+         var itemTitle = $(advantage.queries.itemSearch);
+         var itemQueryStr = itemTitle.text();
+
+         $('div.adv-helper#item-results-expanded p#search-results').
+                text('Searched for "' + itemQueryStr + '"');
+         searchMe(itemQueryStr, 3, function (data) {
+             $.each(data, function(index, value) {
+                  var itemTd = '<td class="search-result-class">';
+                      resultsToDisplay +=
+                      '<tr class="item-match-row search-result-row">' +
+                      itemTd + value.unitPrice + '</td>' +
+                      itemTd + value.unitsOrdered + '</td>' +
+                      itemTd + value.contractingAgency + '</td>' +
+                      itemTd + value.vendor + '</td>' +
+                      itemTd + value['Manufacturer Name'] + '</td>' +
+                      '<td class="search-result-class popup-info" id="' +
+                              index + '">' + 'More&hellip;' + '</td>' + '</tr>';
+             });
+             $('table#item-match-table tbody').
+                        html(resultsToDisplay);
+             $('td.popup-info').on('click', function () {
+                var item = $(this).attr('id');
+                var popupContent =
+                    '<div class="more-info""><p>' +
+                        data[item].longDescription +
+                        '</p><p id="click-to-dismiss">' +
+                        '&lsaquo;Click to dismiss&rsaquo;</p>' +
+                        '</div>';
+                    $(popupContent).insertBefore('td.popup-info#' +
+                        item);
+                $('div.more-info').on('click', function () {
+                    $(this).remove();
+                });
+             });
+        });
+    }
+
+    function templateLoadFailed( jqXHR, textStatus, errorThrown ) {
+        console.log('ajax failed with error: ' + textStatus);
+    }
+
+    var templateMap = [
+                    {
+                        name: "item",
+                        filename: "gsaAdvItemTemplate.html",
+                        successHandler: onItemTemplateLoaded,
+                        errorHandler: templateLoadFailed
+                    }
+                ];
+
+    function executeTemplate(templates, templateName) {
+        $.each(templates, function(index, value) {
+            if (value.name === templateName) {
+                $.ajax({
+                    type: "GET",
+                    url: chrome.extension.getURL(value.filename),
+                    dataType: "html"
+                    }).done(value.successHandler).
+                        fail(value.errorHandler);
+                return false;
+            }
+        });
+    }
+
+        function(response) {
+            if (arguments.length === 0) {
+                alert('Error talking to background');
+            } else {
+                if (response.storage !== 'none') {
+                    p3username = response.p3username;
+                    chrome.runtime.sendMessage({
+                            'command': 'retrieve',
+                            'keyName': 'p3password'
+                        },
+                        function(response) {
+                            if (arguments.length === 0) {
+                                alert(
+                                  'chrome.runtime.sendMessage() returned: ' +
+                                  lastError);
+                            } else {
+                                if (response.storage !== 'none') {
+                                    password = response.password;
+                                    authToken = true;
+                                    executeTemplate(templateMap, 'item');
+                                }
+                            }
+                       }
+                    );
+                }
+        }
+    }
+
+    $(document).ready(function() {
+        if (document.title === "Product Detail") {
+            executeTemplate(templateMap, 'item');
+        }
+    });

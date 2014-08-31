@@ -1,0 +1,112 @@
+/*  This file contains styles applied to the Helper content */
+/*  This file lives at: */
+
+.popup {
+    font-size: 1.5em;
+    background-color: #eeeeee;
+    color: #0000b0;
+}
+
+div.popup {
+    min-width: 400px;
+    min-height: 400px;
+}
+
+h2.popup {
+    font-size 2.0em;
+}
+
+p#click-to-dismiss {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    font: 14px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
+}
+
+p.item-match-header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: #fafafa;
+    font: 16px "Lucida Sans Unicode", "Lucida Grande", Arial,sans-serif;
+    border: gray 1px;
+}
+
+.pp-separator {
+min-height: 20px;
+font-size: 12px;
+background-color: #cccccc;
+}
+
+.pp {
+    font-size: 13px;
+}
+
+.pp table {
+    width: 100%
+}
+
+thead.item-match-header {
+    border-bottom: solid red 2px;
+}
+
+.pp.container {
+border: 2px solid #ff0000;
+margin: 0px;
+padding: 0px;
+width: 100%;
+height:auto;
+}
+
+div.pp-red-head {
+    background-color: #ff0000;
+    height: auto;
+    margin: 0px;
+    border: 0px;
+}
+
+.pp p {
+    vertical-align: middle;
+    font: 16px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    text-align: center;
+}
+
+div.adv-helper#item-results-toggler p#toggler {
+    margin: 0px;
+    text-decoration: underline;
+}
+
+div.more-info {
+    border: solid black 2 px;
+    position: absolute;
+    right: 100px;
+    background-color: #e0e0e0;
+}
+
+div.more-info p {
+    font-size: 12px;
+}
+
+div.adv-helper#credentials {
+    border: solid gray 2px;
+    background-color: #fafafa;
+    visibility: visible;
+    position:static;
+}
+
+div.ppp-results {
+    border-top: 1px solid #202020;
+    border-bottom: 1px solid #202020;
+    border-left: none;
+    border-right: none;
+}
+
+div.adv-helper#item-results-top-content {
+}
+
+div.adv-helper#item-results-bottom-content {
+}
+
+div.adv-helper#item-results-table {
+}
+

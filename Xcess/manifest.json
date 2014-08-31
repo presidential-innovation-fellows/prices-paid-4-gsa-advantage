@@ -1,0 +1,37 @@
+{
+  "name" : "GSAxcess for GSA Advantage",
+  "short_name" : "xcess4GSAAdvantage",
+  "version" : "0.1.0",
+  "description" : "Find and display relevant surplus property",
+  "background" : { "page": "xcess4AdvBg.html" },
+  "icons" : {
+    "48": "icon48.png"          
+    },
+  "permissions" : [
+	      "tabs",
+          "cookies",
+	      "https://gsaxcess.gov/*",
+	      "https://gsaadvantage.gov/*" ],
+  "page_action": {
+    "default_icon": {                  
+        "19": "icon19.png",          
+        "38": "icon38.png"
+        },
+    "default_title": "get items from GSA Surplus",
+    "default_popup": "popup.html"
+    },
+  "content_scripts": [
+	   {
+	   "matches": ["https://www.gsaadvantage.gov/*"],
+	   "css": ["xcess4Adv.css"],
+	   "js": [ "jquery-1.10.2.js", "xcess4Adv.js"]
+	   }
+  ],
+  "minimum_chrome_version" : "6.0.0.0",
+  "manifest_version": 2,
+  "web_accessible_resources": [
+      "https://gsaxcess.gov/*",
+      "gsaAdvItemTemplate.html",
+      "images/*"
+  ]
+}
